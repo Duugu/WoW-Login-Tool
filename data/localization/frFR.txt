@@ -1,1 +1,105 @@
-﻿
+﻿German / Deutsch==Allemand
+French / Français==Franççais
+Russian / Русский==Russe
+Spanish / Español==Espagnole
+Italian / Italiano==Italien
+Portuguese / Português==Portugais
+Korean / 한국어==Coréen
+Chinese / 中文==Chinois
+Setup completed. Start the game now.==Configuration terminée, lencez le jeu
+selected==Séléctionné
+go right to select a voice==Allez à droite
+go right to select a game type==Aller à droite pour séléctionner un type de jeu
+go right to select a language==Aller a droite pour séléctionner une langue
+pause mode==Mis en pause
+play mode==Mode de jeu
+login mode==Mode de connection
+login mode for==Mode de connection pour
+script exited==Terminé
+select language==Choisir la langue
+main menu==Menu principale
+selected, restart script to apply==Séléctionné, relancement du script pour appliquer les modifications, veuillez attendre
+wait==Veuillez attendre
+go right to select a region==Aller a droite pour séléctionner une région
+Europe==Europe
+USA==Etats-Unis
+Wrath==Wrath of the lich king
+Classic==Classic ERA
+Retail==Retail
+Not_available==Non_disponible
+Something went wrong. Please restart the game and try again.==Quelque chose s’est mal passer, veuillez relancer le jeu et réessayer 
+you don't have any characters on the selected server==Vous n’avez aucuns personnages sur le royaume séléctionné.
+character==Personnage
+selected==Séléctionné
+this race is locked for your account. Try a different race.==Cette race n’est pas disponible pour votre compte, essayez d’en séléctionner une autre
+create new character==Créer un nouveau personnage
+login with selected character==Se connecter avec le personnage séléctionné
+select character==Séléctionner le personnage
+enter the name for the new character and press enter, or escape to cancel character creation.==Entrez le nom pour votre nouveau personnage puis appuyez sur entrer ou échape pour annuler.
+Failed You already have the maximum number of character on this server.==La création de personnage a échouée, vous avez atteint le nombre maximum de personnage sur le serveur
+switching to server. please wait.==Changement de royaume, veuillez patienter
+Deleting failed. Type delete again and press enter, or press escape to cancel the deleting process.==La suppression du personnage a échoué, veuillez écrire EFFACER  à nouveau et appuyez sur ENTRER ou appuyez sur échape pour annuler.
+character deleted==Le personnage a bien été supprimé
+Failed. The name is not available, or the names format is not allowed.==Echec, le nom du personnage a déjà été pris ou n’est pas approprié.
+Character created==Le personnage a été créer.
+Empty - No characters on this server.==Vide, il n’y a aucuns personnage sur ce royaume
+switch server==Changer de royaume
+select region==Séléctionner la région
+select game type==Séléctionner le type de jeu
+select voice==Séléctionner la voix
+enter delete and press enter, or press escape to cancel the deleting process.==Ecrivez EFFACER puis appuyez sur ENTRER, sinon appuyez sur échape pour annuler la suppression du personnage.
+delete character==Supprimer le personnage
+switched to Server==Le royaume a été changé
+The server is full. You are in queue.==Le royaume est plein, vous êtes dans la file d’attente
+Please wait.==Veuillez atendre
+Creation is canceled. Please wait.==La création est annulée, veuillez patienter
+Deleting is canceled. Please wait==La suppression est annulée, veuillez patienter
+setup mode==Mode de configuration
+server full. Waiting in queue.==Le royaume est plein, vous êtes dans la file d’attente
+character number:==Personnage numéro 
+Fail. Client is reporting incorrect language.==Echec, le royaume que vous avez séléctionner ne semble pas avoir la même langue que la langue définie sur votre jeu. Le serveur n’a pas été changé.
+Exile's_Reach==Confins de l’Exil
+Race_starting_zone==La zone de départ pour la race
+male==Homme
+female==Femme
+Alliance==Alliance
+Horde==Horde
+Human==Humain
+Dwarf==Nain
+Night_Elf==Elf de la nuit
+Gnome==Gnome
+Draenei==Draenei.
+Worgen==Worgen
+Pandaren_(Alliance)==Pandaren (Alliance)
+Dracthyr_(Alliance)==Dracthyr (Alliance)
+Void_Elf==Elfe du Vide
+Light_Forge_Draenei==Draeneï sancteforge
+Dark_Iron_Dwarf==Nain sombrefer
+Kul_Tiran==Kultiran
+Mecha_Gnome==Mécagnome
+Orc==Orc
+Undead==Mort-vivant
+Tauren==Tauren
+Troll==Troll
+Blood_Elf==Elf du sang
+Goblin==Gobelin
+Pandaren_(Horde)==Pandaren (Horde)
+Dracthyr_(Horde)==Dracthyr (Horde)
+Night_Borne==Sacrenuit
+High_Mountain_Tauren==Taurène de Haut-Roc
+Mag_Har_Ork==Orque mag'har
+Zandalari_Troll==Trolle zandalari
+Vulpera==Vulpérin
+Warrior==Guerrier
+Hunter==Chasseur
+Mage==Mage
+Rogue==Voleur
+Priest==Prêtre
+Warlock==Démoniste
+Paladin==Paladin
+Druid==Druide
+Shaman==Chamane
+Monk==Moine
+Demon_Hunter==Chasseur de démons
+Death_Knight==Chevalier de la mort
+Evoker==Evocateur

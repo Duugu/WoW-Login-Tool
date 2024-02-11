@@ -1,4 +1,4 @@
-WoW Login Tool - Version 1.0
+WoW Login Tool - Version 1.1
 
 IMPORTANT: Excactly follow the instructions below to set up the tool, or it won't work.
 
@@ -49,9 +49,11 @@ Go to https://duugu.github.io/Sku and check in the Updates section of that page 
 - The audio output is via SAPI.
 
 # Providing translations
-Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder, and follow the instructions on the Instructions tab.ation on each string in column D (green)!
+Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder, and follow the instructions on the Instructions tab.
 
 # Release notes
+	r1.1
+		- French translation added
 	r1.0
 		- Initial release
 
