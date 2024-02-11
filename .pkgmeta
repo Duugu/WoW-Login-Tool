@@ -1,3 +1,4 @@
+package-as: WoW Login Tool
 ignore:
   - .git
   - .gitattributes
