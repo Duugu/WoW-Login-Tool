@@ -1,4 +1,5 @@
-﻿German / Deutsch==Allemand
+﻿English==Anglais
+German / Deutsch==Allemand
 French / Français==Franççais
 Russian / Русский==Russe
 Spanish / Español==Espagnole

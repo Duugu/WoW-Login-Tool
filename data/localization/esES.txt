@@ -1,0 +1,106 @@
+﻿English==Inglés
+German / Deutsch==Alemán
+French / Français==Francés
+Russian / Русский==Ruso
+Spanish / Español==Español
+Italian / Italiano==Italiano
+Portuguese / Português==Portugués
+Korean / 한국어==Coreano
+Chinese / 中文==Chino
+Setup completed. Start the game now.==Configuración finalizada, inicie el juego ahora
+selected==seleccionado
+go right to select a voice==Use flecha derecha para seleccionar la voz
+go right to select a game type==Use flecha derecha para seleccionar tipo de juego
+go right to select a language==Use flecha derecha para seleccionar idioma
+pause mode==Modo en pausa
+play mode==Modo de juego
+login mode==Modo de log in
+login mode for==Modo de log in para
+script exited==Finalizado
+select language==Seleccionar idioma
+main menu==Menú principal
+selected, restart script to apply==seleccionado, reiniciando script, espere
+wait==espere
+go right to select a region==use flecha derecha para seleccionar región
+Europe==Europa
+USA==Estados Unidos
+Wrath==La ira del rey exánime
+Classic==Era Clásica
+Retail==Retail
+Not_available==No_disponible
+Something went wrong. Please restart the game and try again.==Algo salió mal. Reinicie el juego e intente nuevamente
+you don't have any characters on the selected server==No hay personajes en el servidor seleccionado
+character==personaje
+selected==seleccionado
+this race is locked for your account. Try a different race.==Esta raza está bloqueada para su cuenta, elija una raza diferente
+create new character==Crear nuevo personaje
+login with selected character==Ingresar con el personaje seleccionado
+select character==Elegir personaje
+enter the name for the new character and press enter, or escape to cancel character creation.==Ingrese el nombre para el nuevo personaje y presione enter, o escape para cancelar
+Failed You already have the maximum number of character on this server.==Error, alcanzó el límite de personajes para este servidor
+switching to server. please wait.==Cambiando servidor, espere
+Deleting failed. Type delete again and press enter, or press escape to cancel the deleting process.==Error al eliminar. Vuelva a escribir borrar y presione enter, o escape para cancelar
+character deleted==Personaje eliminado
+Failed. The name is not available, or the names format is not allowed.==Error, el nombre no está disponible o no es válido
+Character created==Personaje creado
+Empty - No characters on this server.==Vacío, no hay personajes en este servidor
+switch server==Cambiar servidor
+select region==Seleccionar región
+select game type==Seleccionar tipo de juego
+select voice==Seleccionar voz
+enter delete and press enter, or press escape to cancel the deleting process.==Escriba borrar y presione enter, o escape para cancelar
+delete character==Eliminar personaje
+switched to Server==Servidor cambiado
+The server is full. You are in queue.==Servidor lleno, esperando en la cola
+Please wait.==Por favor espere
+Creation is canceled. Please wait.==Creación cancelada, espere
+Deleting is canceled. Please wait==Eliminación cancelada, espere
+setup mode==Modo de configuración
+server full. Waiting in queue.==Servidor lleno, esperando en la cola
+character number:==Número de personaje
+Fail. Client is reporting incorrect language.==Error, el idioma del cliente no está disponible para este servidor. No se cambió
+Exile's_Reach==Confín del Exilio
+Race_starting_zone==Zona inicial de la raza
+male==Masculino
+female==Femenino
+Alliance==Alianza
+Horde==Horda
+Human==Humano
+Dwarf==Enano
+Night_Elf==Elfo de la noche
+Gnome==Gnomo
+Draenei==Draenei
+Worgen==Huargen
+Pandaren_(Alliance)==Pandaren (Alianza)
+Dracthyr_(Alliance)==Dracthyr (Alianza)
+Void_Elf==Elfo del vacío
+Light_Forge_Draenei==Draenei forjado por la luz
+Dark_Iron_Dwarf==Enano Hierro Negro
+Kul_Tiran==Ciudadano de Kul Tiras
+Mecha_Gnome==Mecagnomo
+Orc==Orco
+Undead==No-muerto
+Tauren==Tauren
+Troll==Trol
+Blood_Elf==Elfo de sangre
+Goblin==Goblin
+Pandaren_(Horde)==Pandaren (Horda)
+Dracthyr_(Horde)==Dracthyr (Horda)
+Night_Borne==Nocheterna
+High_Mountain_Tauren==Tauren Montealto
+Mag_Har_Ork==Orco Mag'har
+Zandalari_Troll==Trol Zandalari
+Vulpera==Vulpera
+Warrior==Guerrero
+Hunter==Cazador
+Mage==Mago
+Rogue==Pícaro
+Priest==Sacerdote
+Warlock==Brujo
+Paladin==Paladín
+Druid==Druida
+Shaman==Chamán
+Monk==Monje
+Demon_Hunter==Cazador de demonios
+Death_Knight==Caballero de la muerte
+Evoker==Evocador
