@@ -1,4 +1,4 @@
-WoW Login Tool - Version 1.1
+WoW Login Tool - Version 1.0
 
 IMPORTANT: Follow the instructions below to set up the tool, otherwise it won't work.
 
@@ -63,5 +63,5 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
-	r1.1
+	r1.0
 		- Initial release
