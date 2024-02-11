@@ -1,0 +1,3 @@
+package-as: wow_menu
+ignore:
+  - workspace.code-workspace
