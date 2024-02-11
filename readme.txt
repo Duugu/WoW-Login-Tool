@@ -19,7 +19,8 @@ Getting help: https://discord.gg/FsfKeqxZV4
 9. You're done.
 
 # What is the tool doing?
-The tool will start in "Pause mode", doing nothing. It is getting active if it is detecting the game window.
+The tool will start in "Pause mode", doing nothing. It is getting active and initialize if it is detecting the game window aka if you're switching the Windows focus to the game.
+Do not press any key while the tool is playing the blip, blip sound. Never move the the mouse or click while using the tool.
 The tool has two modes: "Login" and "Play". Depending on if you are on the login screen or in the game world, the tool will auto switch modes. You can manually switch them with ALT + F1.
 In "Login" mode, you can select characters and enter the game world with them, create new characters, change the server or delete characters.
 In "Play" mode, you can use the NUMPAD 7 to do a left click at your feet in the game world or NUMPAD 8 to do a right click.
