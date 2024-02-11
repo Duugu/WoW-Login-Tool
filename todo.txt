@@ -1,0 +1,4 @@
+check all gRealmLangs coords
+audio->SetState(SPAS_STOP, 0);
+alt + esc isn working during init
+mail icon

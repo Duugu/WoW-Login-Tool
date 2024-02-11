@@ -1,0 +1,106 @@
+﻿English==English
+German / Deutsch==German
+French / Français==French
+Russian / Русский==Russian
+Spanish / Español==Spanish
+Italian / Italiano==Italian
+Portuguese / Português==Portuguese
+Korean / 한국어==Korean
+Chinese / 中文==Chinese
+Setup completed. Start the game now.==Setup completed. Start the game now.
+selected==selected
+go right to select a voice==Go right to select a voice
+go right to select a game type==Go right to select a game type
+go right to select a language==Go right to select a language
+pause mode==Pause mode
+play mode==Play mode
+login mode==Login mode
+login mode for==Login mode for
+script exited==Terminated
+select language==Select language
+main menu==Main menu
+selected, restart script to apply==selected. Restarting script to apply. Please wait.
+wait==Wait
+go right to select a region==Go right to select a region
+Europe==Europe
+USA==USA
+Wrath==Wrath of the Lich King
+Classic==Classic Era
+Retail==Retail
+Not_available==Not_available
+Something went wrong. Please restart the game and try again.==Something went wrong. Please restart the game and try again.
+you don't have any characters on the selected server==You don't have any characters on the selected server
+character==character
+selected==selected
+this race is locked for your account. Try a different race.==This race is locked for your account. Try a different race.
+create new character==Create new character
+login with selected character==Login with selected character
+select character==Select character
+enter the name for the new character and press enter, or escape to cancel character creation.==Enter the name for the new character and press enter, or escape to cancel character creation.
+Failed You already have the maximum number of character on this server.==Failed. You already have the maximum number of character on this server.
+switching to server. please wait.==Changing server. Please wait.
+Deleting failed. Type delete again and press enter, or press escape to cancel the deleting process.==Deleting failed. Type Delete again and press enter, or press escape to cancel the deleting process.
+character deleted==Character deleted
+Failed. The name is not available, or the names format is not allowed.==Failed. The name is not available, or the name is not allowed.
+Character created==Character created
+Empty - No characters on this server.==Empty. No characters on this server.
+switch server==Change server
+select region==Select region
+select game type==Select game type
+select voice==Select voice
+enter delete and press enter, or press escape to cancel the deleting process.==Enter Delete and press enter, or press escape to cancel the deleting process.
+delete character==Delete character
+switched to Server==Server changed
+The server is full. You are in queue.==The server is full. You are in the queue.
+Please wait.==Please wait.
+Creation is canceled. Please wait.==Creation is canceled. Please wait.
+Deleting is canceled. Please wait==Deleting is canceled. Please wait
+setup mode==Setup mode
+server full. Waiting in queue.==The server is full. You are in the queue.
+character number:==Character number:
+Fail. Client is reporting incorrect language.==Failed. Client is reporting an incorrect client language for this server. Server not switched.
+Exile's_Reach==Exile's Reach
+Race_starting_zone==Race starting zone
+male==male
+female==female
+Alliance==Alliance
+Horde==Horde
+Human==Human
+Dwarf==Dwarf
+Night_Elf==Night Elf
+Gnome==Gnome
+Draenei==Draenei
+Worgen==Worgen
+Pandaren_(Alliance)==Pandaren (Alliance)
+Dracthyr_(Alliance)==Dracthyr (Alliance)
+Void_Elf==Void Elf
+Light_Forge_Draenei==Light Forge Draenei
+Dark_Iron_Dwarf==Dark Iron Dwarf
+Kul_Tiran==Kul Tiran
+Mecha_Gnome==Mecha Gnome
+Orc==Orc
+Undead==Undead
+Tauren==Tauren
+Troll==Troll
+Blood_Elf==Blood Elf
+Goblin==Goblin
+Pandaren_(Horde)==Pandaren (Horde)
+Dracthyr_(Horde)==Dracthyr (Horde)
+Night_Borne==Night Borne
+High_Mountain_Tauren==High Mountain Tauren
+Mag_Har_Ork==Mag Har Ork
+Zandalari_Troll==Zandalari Troll
+Vulpera==Vulpera
+Warrior==Warrior
+Hunter==Hunter
+Mage==Mage
+Rogue==Rogue
+Priest==Priest
+Warlock==Warlock
+Paladin==Paladin
+Druid==Druid
+Shaman==Shaman
+Monk==Monk
+Demon_Hunter==Demon Hunter
+Death_Knight==Death Knight
+Evoker==Evoker

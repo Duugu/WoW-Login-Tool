@@ -1,0 +1,106 @@
+﻿English==Englisch
+German / Deutsch==Deutsch
+French / Français==Französisch
+Russian / Русский==Russisch
+Spanish / Español==Spanisch
+Italian / Italiano==Italienisch
+Portuguese / Português==Portugiesisch
+Korean / 한국어==Koreanisch
+Chinese / 中文==Chinesisch
+Setup completed. Start the game now.==Einrichtung abgeschlossen. Starte jetzt das Spiel.
+selected==ausgewählt
+go right to select a voice==Nach rechts gehen, um eine Stimme auszuwählen
+go right to select a game type==Nach rechts gehen, um einen Spieltyp auszuwählen
+go right to select a language==Nach rechts gehen, um eine Sprache auszuwählen
+pause mode==Pausen Modus
+play mode==Spiel Modus
+login mode==Login Modus
+login mode for==Login Modus für:
+script exited==Beendet
+select language==Sprache auswählen
+main menu==Hauptmenü
+selected, restart script to apply==ausgewählt. Wird neu gestartet. Bitte warte.
+wait==Warten
+go right to select a region==Gehe nach rechts, um eine Region auszuwählen
+Europe==Europa
+USA==USA
+Wrath==Wrath of the Lich King
+Classic==Classic Ära
+Retail==Retail
+Not_available==Nicht_verfügbar
+Something went wrong. Please restart the game and try again.==Etwas ist schief gelaufen. Bitte starte das Spiel neu und versuche es noch einmal.
+you don't have any characters on the selected server==Du hast keine Charaktere auf dem ausgewählten Server
+character==Charakter
+selected==ausgewählt
+this race is locked for your account. Try a different race.==Diese Rasse ist für deinen Account gesperrt. Versuche es mit einer anderen Rasse.
+create new character==Neuen Charakter erstellen
+login with selected character==Login mit ausgewähltem Charakter
+select character==Charakter auswählen
+enter the name for the new character and press enter, or escape to cancel character creation.==Gib den Namen des neuen Charakters ein und drücke die Eingabetaste oder brich die Charaktererstellung mit Escape ab.
+Failed You already have the maximum number of character on this server.==Fehlgeschlagen. Du hast bereits die maximale Anzahl Chars auf diesem Server.
+switching to server. please wait.==Server wird gewechselt. Bitte warte.
+Deleting failed. Type delete again and press enter, or press escape to cancel the deleting process.==Löschen fehlgeschlagen. Tippe erneut Löschen ein und drücke die Eingabetaste, oder drücke Escape, um den Löschvorgang abzubrechen.
+character deleted==Charakter gelöscht
+Failed. The name is not available, or the names format is not allowed.==Fehlgeschlagen. Der Name ist nicht verfügbar, oder der Name ist nicht erlaubt.
+Character created==Charakter erstellt
+Empty - No characters on this server.==Leer. Keine Chars auf diesem Server.
+switch server==Server wechseln
+select region==Region auswählen
+select game type==Spieltyp auswählen
+select voice==Stimme auswählen
+enter delete and press enter, or press escape to cancel the deleting process.==Gib Löschen ein und drücke die Eingabetaste, oder drücke Escape, um den Löschvorgang abzubrechen.
+delete character==Charakter löschen
+switched to Server==Server gewechselt
+The server is full. You are in queue.==Der Server ist voll. Du befindest dich in der Warteschlange.
+Please wait.==Bitte warte.
+Creation is canceled. Please wait.==Die Erstellung wird abgebrochen. Bitte warte.
+Deleting is canceled. Please wait==Das Löschen wird abgebrochen. Bitte warte.
+setup mode==Einrichtungs Modus
+server full. Waiting in queue.==Der Server ist voll. Du befindest dich in der Warteschlange.
+character number:==Charakter Nummer:
+Fail. Client is reporting incorrect language.==Fehlgeschlagen. Der Client meldet eine falsche Client-Sprache für diesen Server. nicht gewechselt.
+Exile's_Reach==Insel des Verbannten
+Race_starting_zone==Rassenstartgebiet
+male==männlich
+female==weiblich
+Alliance==Allianz
+Horde==Horde
+Human==Mensch
+Dwarf==Zwerg
+Night_Elf==Nachtelf
+Gnome==Grnom
+Draenei==Draenei
+Worgen==Worgen
+Pandaren_(Alliance)==Pandaren (Allianz)
+Dracthyr_(Alliance)==Dracthyr (Allianz)
+Void_Elf==Leerenelf
+Light_Forge_Draenei==Lichgeschmiedete Draenei
+Dark_Iron_Dwarf==Dunkeleisenzwerg
+Kul_Tiran==Kul Tiraner
+Mecha_Gnome==Mechangnom
+Orc==Okr
+Undead==Untoter
+Tauren==Taure
+Troll==Troll
+Blood_Elf==Blutelf
+Goblin==Goblin
+Pandaren_(Horde)==Pandaren (Horde)
+Dracthyr_(Horde)==Dracthyr (Horde)
+Night_Borne==Nachtgeborene
+High_Mountain_Tauren==Hochbergtauren
+Mag_Har_Ork==Orks der Mag Har
+Zandalari_Troll==Zandalaritroll
+Vulpera==Vulpera
+Warrior==Krieger
+Hunter==Jäger
+Mage==Magier
+Rogue==Schurke
+Priest==Priester
+Warlock==Hexenmeister
+Paladin==Paladin
+Druid==Druide
+Shaman==Schamane
+Monk==Mönch
+Demon_Hunter==Dämonenjäger
+Death_Knight==Todesritter
+Evoker==Rufer
