@@ -1,1 +1,5 @@
 ## Title: WoW Login Tool
+## Interface: 100205
+## Interface-Classic: 11501
+## Interface-BCC: 20504
+## Interface-Wrath: 30403
