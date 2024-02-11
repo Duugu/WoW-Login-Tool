@@ -1,6 +1,0 @@
-package-as: WoW Login Tool
-ignore:
-  - .git
-  - .gitattributes
-  - workspace.code-workspace
-  - WoW Login Tool.toc
