@@ -161,7 +161,14 @@ PlayUtterance(aText)
 	{
 		aText := StrReplace(aText, "_", " ")
 
-		sap.Rate := 5
-		sap.Speak(aText, 3)
+		try
+		{
+			sap.Rate := 5
+			sap.Speak(aText, 3)
+		}
+		catch e 
+		{
+			;OutputDebug % "sap.speak err" . e
+		}
 	}
 }

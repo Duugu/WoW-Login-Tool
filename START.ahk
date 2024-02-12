@@ -78,4 +78,4 @@ gosub InitMenuFirstStartRegionMenu
 
 
 ;------------------------------------------------------------------------------------------
-#Include %A_ScriptDir%\data\includes\debug.ahk
+;#Include %A_ScriptDir%\data\includes\debug.ahk
