@@ -1,8 +1,9 @@
-WoW Login Tool - Version 1.1
+WoW Login Tool - Version 1.2
 
-IMPORTANT: Follow the instructions below to set up the tool, otherwise it won't work.
-
-Get help: https://discord.gg/FsfKeqxZV4
+IMPORTANT:
+Carefully follow the instructions below to set up the tool, otherwise it won't work.
+If the tool isn't working, please consult the "Common problems when the tool doesn't work" section below.
+If you need help, feel free to ask in our Discord: https://discord.gg/FsfKeqxZV4
 
 # Setting up the tool
 1. Open the "CopyTheContentOfThisFolderToInterface" folder in the WoW Login Tool folder you downloaded. There should be 5 folders in this folder ("BUTTONS", "DialogFrame", etc.).
@@ -25,7 +26,14 @@ When you start the tool, it will be in Pause mode, waiting in the background and
 When it detects the World of Warcraft game window, i.e. when you start the game or tab into the game that's already running, it becomes active and initialises.
 The tool will automatically switch modes depending on whether you are in the login screen or the game world. 
 In Login mode, you can use an audio menu to select characters and enter the game world, create new characters, change servers, or delete characters.
-In Play mode, you can use NUMPAD 7 to left-click at your feet in the game world, or NUMPAD 8 to right-click.
+In Play mode, you can use NUMPAD 7 to left-click at your feet in the game world, or NUMPAD 8 to right-click. (This feature isn't enabled for Retail.)
+
+# Common problems when the tool doesn't work
+Most issues are caused by screen overlays that prevent the WoW Login Tool from recognising the WoW game screen.
+- If you are in a Discord voice channel, Discord will display an overlay of all channel members at the top left of your screen. This overlay blocks the login tool. You should disable this feature in Discord. In Discord, go to User Settings > Game Overlay, and toggle Enable in-game overlay to Off.
+- If you have an Nvidia graphics adapter, there may be an overlay at the top right of your screen showing the status of your graphics adapter. This is caused by an Nvidia tool that could be installed by default with your graphics adapter setup. This overlay blocks the WoW login tool. You can try hiding the overlay using the default Nvidia Alt+R shortcut.
+If neither of these fixes the problem, please check that you've copied the folders from CopyTheContentOfThisFolderToInterface to the correct game folder.
+If this is confirmed and you are still having problems, please feel free to join our Discord server and ask for help: https://discord.gg/FsfKeqxZV4
 
 # Using the tool
 Important: Do not press any keys while the tool is working (it will play the blip, blip sound). Do not move the mouse or click while the tool is running.
@@ -35,6 +43,7 @@ Use the up/down arrow keys to navigate to the previous/next item in the audio me
 Use the Enter key to choose/execute a menu item.
 To exit the tool, press alt + escape.
 Each time you tab out of the game (Pause mode) and back in (Login mode), the tool needs to initialise. This is by design. Just wait for the audio menu to come up.
+The tool isn't recognizing the names and classes of your characters. It is just refering them by numbers. Character 1, 2, etc. You need to keep track of what number is what character by yourself. New characters will always be added to the end of the list.
 
 # Keys
 Right/left/up/down arrows: navigate one entry right/left/etc. in the audio menu
@@ -63,6 +72,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.2
+		- Removed the numpad 7 and 8 key binds for retail
+		- Added the "Common problems when the tool doesn't work" section to the readme
 	r1.1
 		- Bug fixes
 	r1.0
