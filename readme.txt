@@ -1,4 +1,4 @@
-WoW Login Tool - Version 1.2
+WoW Login Tool - Version 1.3
 
 IMPORTANT:
 Carefully follow the instructions below to set up the tool, otherwise it won't work.
@@ -72,6 +72,8 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.3
+		- Changed the sapi voice selection to leave the selected system voice unmodified
 	r1.2
 		- Removed the numpad 7 and 8 key binds for retail
 		- Added the "Common problems when the tool doesn't work" section to the readme

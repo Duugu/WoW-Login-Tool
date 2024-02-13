@@ -606,15 +606,12 @@ InitMenu:
 		gMainMenu.childs[tMainItemN].childs[tVoiceNumber] := new baseMenuEntryObject
 		gMainMenu.childs[tMainItemN].childs[tVoiceNumber].parent := gMainMenu.childs[tMainItemN]
 		gMainMenu.childs[tMainItemN].childs[tVoiceNumber].name := tVoiceNumber . ": " . v
-		gMainMenuVoiceAction(this, voiceNumber)
+		gMainMenuVoiceAction(this, voiceNumber, voiceName)
 		{
 			gIgnoreKeyPress := true
 
-			;save the voice
-			gHasSetupVoice := voiceNumber
-
-			SetVoice(voiceNumber)
-			WriteSettings()
+			SetToolVoiceByName(voiceName)
+			WriteSettings(false)
 
 			PlayUtterance(L["selected"])
 			WaitForX(1, 500)
@@ -623,7 +620,7 @@ InitMenu:
 			gCurrentMenuItem := gMainMenu
 			gMainMenu.onEnter()
 		}
-		gMainMenu.childs[tMainItemN].childs[tVoiceNumber].onAction := Func("gMainMenuVoiceAction").Bind(gMainMenu.childs[tMainItemN].childs[tVoiceNumber], tVoiceNumber)
+		gMainMenu.childs[tMainItemN].childs[tVoiceNumber].onAction := Func("gMainMenuVoiceAction").Bind(gMainMenu.childs[tMainItemN].childs[tVoiceNumber], tVoiceNumber, v)
 
 		;MsgBox %  tVoiceNumber . ": " . v
 	}
@@ -650,7 +647,7 @@ InitMenu:
 
 			;save the lang
 			SetLanguage(code)
-			WriteSettings()
+			WriteSettings(false)
 			
 			PlayUtterance(L["selected, restart script to apply"])
 			WaitForX(2, 1000)
@@ -685,8 +682,9 @@ InitMenu:
 			;save the voice
 			global gHasSetupGametype := ganmeName
 			global gHasSetup := true
+			global gHasSetupVersion := gVersion
 
-			WriteSettings()
+			WriteSettings(false)
 			
 			PlayUtterance(L["selected, restart script to apply"])
 			WaitForX(2, 1000)
@@ -723,8 +721,9 @@ InitMenu:
 			;save the voice
 			global gHasSetupRegion := aRegionCode
 			global gHasSetup := true
+			global gHasSetupVersion := gVersion
 
-			WriteSettings()
+			WriteSettings(false)
 			
 			PlayUtterance(L["selected, restart script to apply"])
 			WaitForX(2, 1000)
@@ -797,12 +796,11 @@ InitMenuFirstStartVoiceMenu:
 		gMainMenuVoice.childs[tVoiceNumber] := new baseMenuEntryObject
 		gMainMenuVoice.childs[tVoiceNumber].parent := gMainMenuVoice
 		gMainMenuVoice.childs[tVoiceNumber].name := tVoiceNumber . ": " . v
-		InitMenuFirstStartVoiceMenu(this, voiceNumber)
+		InitMenuFirstStartVoiceMenu(this, voiceNumber, voiceName)
 		{
 			gIgnoreKeyPress := true
 
-			gHasSetupVoice := voiceNumber
-			SetVoice(voiceNumber)
+			SetToolVoiceByName(voiceName)
 			PlayUtterance(L["selected"])
 			WaitForX(1, 500)
 
@@ -811,7 +809,7 @@ InitMenuFirstStartVoiceMenu:
 			gCurrentMenuItem := gMainMenuLanguage
 			gMainMenuLanguage.onEnter()
 		}
-		gMainMenuVoice.childs[tVoiceNumber].onAction := Func("InitMenuFirstStartVoiceMenu").Bind(gMainMenuVoice.childs[tVoiceNumber], tVoiceNumber)
+		gMainMenuVoice.childs[tVoiceNumber].onAction := Func("InitMenuFirstStartVoiceMenu").Bind(gMainMenuVoice.childs[tVoiceNumber], tVoiceNumber, v)
 	}
 
 	UpdateChilds(gMainMenuVoice)
@@ -882,7 +880,7 @@ InitMenuFirstStartRegionMenu:
 			gIgnoreKeyPress := true
 
 			global gHasSetupRegion := aRegionCode
-			WriteSettings()
+			WriteSettings(false)
 
 			gIgnoreKeyPress := false
 
@@ -926,7 +924,9 @@ InitMenuFirstStartGameTypeMenu:
 
 			global gHasSetupGametype := gameName
 			global gHasSetup := true
-			WriteSettings()
+			global gHasSetupVersion := gVersion
+
+			WriteSettings(false)
 			LoadData()
 			WaitForX(2, 500)
 			

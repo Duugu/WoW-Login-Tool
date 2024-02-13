@@ -2,10 +2,12 @@
 #MaxThreadsPerHotkey 2 ;we need that for NumpadSub; without at least 2 threads it won't be able to interupt itself to switch modes while the select mode is scanning for the char selection screen
 #SingleInstance Force
 #NoEnv
-
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 FileEncoding, UTF-8
+
+;------------------------------------------------------------------------------------------
+global gVersion := 1.3
 
 ;------------------------------------------------------------------------------------------
 #Include %A_ScriptDir%\data\includes\sapi.ahk
@@ -15,9 +17,10 @@ FileEncoding, UTF-8
 ;------------------------------------------------------------------------------------------
 global gManualOverride := false
 global gHasSetup := false
+global gHasSetupVersion := 0
 global gHasSetupGametype := false
 global gHasSetupRegion := false
-global gHasSetupVoice := false
+global gHasSetupVoice := sap.Voice.GetDescription()
 global gHasSetupLanguage := false
 global gMenuBigStep := 10
 global gCurrentMenuItem
@@ -45,6 +48,7 @@ global gIsChecking
 global tPopupClosed
 global Mode := -1
 global gInQueue := false
+global gOrgSapiVoiceObject
 
 ;------------------------------------------------------------------------------------------
 LoadSettings()
@@ -75,7 +79,6 @@ gosub InitMenuFirstStartRegionMenu
 #Include %A_ScriptDir%\data\includes\gameuihandling.ahk
 #Include %A_ScriptDir%\data\includes\keybinds.ahk
 #Include %A_ScriptDir%\data\includes\datahandling.ahk
-
 
 ;------------------------------------------------------------------------------------------
 ;#Include %A_ScriptDir%\data\includes\debug.ahk

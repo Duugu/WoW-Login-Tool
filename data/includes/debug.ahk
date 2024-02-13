@@ -95,15 +95,11 @@ return
 
 */
 f1::
-	if(sap)
-		{
-			OutputDebug % "sap " . sap
-			try {
-				sap.Speak("test")
-		  } catch e {
-			OutputDebug % "sap.speak err" . e
-		}
-		}
+voices := GetVoices()
+for k, v in voices
+{
+	OutputDebug % k . "-" . v
+}
 
 	;tmp := UiToScreen(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x, gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
 	;MouseMove, tmp.X, tmp.Y, 0
@@ -159,3 +155,5 @@ NumpadAdd::
 	Pause, Off
 	
 return
+
+

@@ -1,15 +1,16 @@
 ﻿;------------------------------------------------------------------------------------------
-WriteSettings()
+WriteSettings(aReset)
 {
 	tFileHandle := FileOpen(A_ScriptDir . "\data\settings.ini", "w")
 
-	if(gHasSetup != false)
+	if(gHasSetup != false && aReset != true)
 	{
 		tFileHandle.WriteLine("gHasSetupGametype=" . gHasSetupGametype)
 		tFileHandle.WriteLine("gHasSetupVoice=" . gHasSetupVoice)
 		tFileHandle.WriteLine("gHasSetupLanguage=" . gHasSetupLanguage)
 		tFileHandle.WriteLine("gHasSetupRegion=" . gHasSetupRegion)
 		tFileHandle.WriteLine("gHasSetup=" . gHasSetup)
+		tFileHandle.WriteLine("gHasSetupVersion=" . gHasSetupVersion)
 	}
 }
 
@@ -50,11 +51,27 @@ LoadSettings()
 			{
 				global gHasSetup := tArray[2]
 			}
+			if(tArray[1] == "gHasSetupVersion")
+			{
+				global gHasSetupVersion := tArray[2]
+			}
 		}
 	}
 	else
 	{
-		WriteSettings()
+		WriteSettings(false)
+	}
+
+	if(gHasSetupVersion < gVersion)
+	{
+		global gHasSetup := false
+		global gHasSetupVersion := gVersion
+		global gHasSetupGametype := false
+		global gHasSetupRegion := false
+		global gHasSetupVoice := sap.Voice.GetDescription()
+		global gHasSetupLanguage := false
+
+		WriteSettings(true)
 	}
 }
 
