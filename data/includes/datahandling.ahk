@@ -62,10 +62,10 @@ LoadSettings()
 		WriteSettings(false)
 	}
 
-	if(gHasSetupVersion < gVersion)
+	if(gHasSetupVersion < gSettingsVersion)
 	{
 		global gHasSetup := false
-		global gHasSetupVersion := gVersion
+		global gHasSetupVersion := gSettingsVersion
 		global gHasSetupGametype := false
 		global gHasSetupRegion := false
 		global gHasSetupVoice := sap.Voice.GetDescription()

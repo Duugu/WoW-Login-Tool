@@ -1,1 +1,106 @@
-﻿
+﻿English==Английский
+German / Deutsch==Немецкий
+French / Français==Французский
+Russian / Русский==Русский
+Spanish / Español==Испанский
+Italian / Italiano==Итальянский
+Portuguese / Português==Португальский
+Korean / 한국어==Корейский
+Chinese / 中文==Китайский
+Setup completed. Start the game now.==Настройка завершена. Сейчас запустите игру.
+selected==выбран
+go right to select a voice==Перейдите вправо, чтобы выбрать голос
+go right to select a game type==Перейдите вправо, чтобы выбрать версию игры
+go right to select a language==Перейдите вправо, чтобы выбрать язык
+pause mode==Режим паузы
+play mode==Режим игры
+login mode==Режим входа
+login mode for==Режим входа для
+script exited==Завершён
+select language==Выберите язык
+main menu==Главное меню
+selected, restart script to apply==выбран. Скрипт перезапускается для применения изменений.
+wait==подождите
+go right to select a region==Перейдите вправо, чтобы выбрать регион
+Europe==Европа
+USA==США
+Wrath==Гнев Короля-лича
+Classic==Классическая эра
+Retail==Актуальный
+Not_available==Недоступен
+Something went wrong. Please restart the game and try again.==Что-то пошло не так. Пожалуйста, перезапустите игру и попробуйте снова.
+you don't have any characters on the selected server==У вас нет персонажей на выбранном сервере.
+character==Персонаж
+selected==выбран
+this race is locked for your account. Try a different race.==Эта раса заблокирована для вашего аккаунта. Пожалуйста, выберите другую расу.
+create new character==Создать нового персонажа
+login with selected character==Войти с выбранным персонажем
+select character==Выбрать персонажа
+enter the name for the new character and press enter, or escape to cancel character creation.==Введите имя нового персонажа и нажмите enter или нажмите escape для отмены создания персонажа.
+Failed You already have the maximum number of character on this server.==Ошибка. У вас уже максимальное количество персонажей на этом сервере.
+switching to server. please wait.==Идёт смена сервера, пожалуйста, подождите.
+Deleting failed. Type delete again and press enter, or press escape to cancel the deleting process.==Произошла ошибка при удалении персонажа. Пожалуйста, напечатайте delete снова и нажмите enter или нажмите escape для отмены удаления.
+character deleted==Персонаж удалён
+Failed. The name is not available, or the names format is not allowed.==Ошибка. Выбранное имя недоступно или запрещено.
+Character created==Персонаж создан
+Empty - No characters on this server.==Пусто. Нет персонажей на этом сервере.
+switch server==Изменить сервер.
+select region==Выберите регион
+select game type==Выберите версию игры
+select voice==Выберите голос
+enter delete and press enter, or press escape to cancel the deleting process.==Напечатайте delete и нажмите enter или нажмите escape для отмены удаления.
+delete character==Удалить персонажа
+switched to Server==Сервер изменён
+The server is full. You are in queue.==Сервер переполнен. Вы в очереди
+Please wait.==Пожалуйста, подождите
+Creation is canceled. Please wait.==Создание отменено, пожалуйста, подождите
+Deleting is canceled. Please wait==Удаление отменено, пожалуйста, подождите
+setup mode==Режим настройки
+server full. Waiting in queue.==Сервер переполнен. Вы в очереди
+character number:==Номер персонажа:
+Fail. Client is reporting incorrect language.==Ошибка. Игра сообщает о некорректном языке клиента для этого сервера. Сервер не изменён.
+Exile's_Reach==Остров изгнанников
+Race_starting_zone==Расовая стартовая зона
+male==Мужской
+female==Женский
+Alliance==Альянс
+Horde==Орда
+Human==Люди
+Dwarf==Дворфы
+Night_Elf==Ночные Эльфы
+Gnome==Гномы
+Draenei==Дренеи
+Worgen==Воргены
+Pandaren_(Alliance)==Пандарены (Альянс)
+Dracthyr_(Alliance)==Драктиры (Альянс)
+Void_Elf==Эльфы Бездны
+Light_Forge_Draenei==Озарённые Дренеи
+Dark_Iron_Dwarf==Дворфы Чёрного Железа
+Kul_Tiran==Культирасцы
+Mecha_Gnome==Механогномы
+Orc==Орки
+Undead==Нежить
+Tauren==Таурены
+Troll==Тролли
+Blood_Elf==Эльфы Крови
+Goblin==Гоблины
+Pandaren_(Horde)==Пандарены (Орда)
+Dracthyr_(Horde)==Дактиры (Орда)
+Night_Borne==Ночнорождённые
+High_Mountain_Tauren==Таурены Крутогорья
+Mag_Har_Ork==Маг'хары
+Zandalari_Troll==Зандалары
+Vulpera==Вульперы
+Warrior==Воин
+Hunter==Охотник
+Mage==Маг
+Rogue==Разбойник
+Priest==Жрец
+Warlock==Чернокнижник
+Paladin==Паладин
+Druid==Друид
+Shaman==Шаман
+Monk==Монах
+Demon_Hunter==Охотник на демонов
+Death_Knight==Рыцарь Смерти
+Evoker==Пробудитель

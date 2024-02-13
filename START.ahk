@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%
 FileEncoding, UTF-8
 
 ;------------------------------------------------------------------------------------------
-global gVersion := 1.3
+global gSettingsVersion := 1.3
 
 ;------------------------------------------------------------------------------------------
 #Include %A_ScriptDir%\data\includes\sapi.ahk

@@ -682,7 +682,7 @@ InitMenu:
 			;save the voice
 			global gHasSetupGametype := ganmeName
 			global gHasSetup := true
-			global gHasSetupVersion := gVersion
+			global gHasSetupVersion := gSettingsVersion
 
 			WriteSettings(false)
 			
@@ -721,7 +721,7 @@ InitMenu:
 			;save the voice
 			global gHasSetupRegion := aRegionCode
 			global gHasSetup := true
-			global gHasSetupVersion := gVersion
+			global gHasSetupVersion := gSettingsVersion
 
 			WriteSettings(false)
 			
@@ -924,7 +924,7 @@ InitMenuFirstStartGameTypeMenu:
 
 			global gHasSetupGametype := gameName
 			global gHasSetup := true
-			global gHasSetupVersion := gVersion
+			global gHasSetupVersion := gSettingsVersion
 
 			WriteSettings(false)
 			LoadData()
