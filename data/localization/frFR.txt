@@ -82,7 +82,7 @@ Orc==Orc
 Undead==Mort-vivant
 Tauren==Tauren
 Troll==Troll
-Blood_Elf==Elf du sang
+Blood_Elf==Elf de sang
 Goblin==Gobelin
 Pandaren_(Horde)==Pandaren (Horde)
 Dracthyr_(Horde)==Dracthyr (Horde)

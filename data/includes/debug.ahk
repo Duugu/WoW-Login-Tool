@@ -95,14 +95,7 @@ return
 
 */
 f1::
-voices := GetVoices()
-for k, v in voices
-{
-	OutputDebug % k . "-" . v
-}
-
-	;tmp := UiToScreen(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x, gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
-	;MouseMove, tmp.X, tmp.Y, 0
+AcceptContract()
 return
 
 f2::

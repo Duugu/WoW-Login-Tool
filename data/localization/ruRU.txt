@@ -85,7 +85,7 @@ Troll==Тролли
 Blood_Elf==Эльфы Крови
 Goblin==Гоблины
 Pandaren_(Horde)==Пандарены (Орда)
-Dracthyr_(Horde)==Дактиры (Орда)
+Dracthyr_(Horde)==Драктиры (Орда)
 Night_Borne==Ночнорождённые
 High_Mountain_Tauren==Таурены Крутогорья
 Mag_Har_Ork==Маг'хары

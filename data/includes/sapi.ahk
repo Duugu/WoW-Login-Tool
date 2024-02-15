@@ -99,10 +99,8 @@ PlayUtterance(aText)
 			global gOrgSapiVoiceObject := sap.Voice
 
 			SetSapiVoiceByName(gHasSetupVoice)
-
 			sap.Rate := 5
 			sap.Speak(aText, 3)
-
 			sap.Voice := gOrgSapiVoiceObject
 		}
 		catch e 

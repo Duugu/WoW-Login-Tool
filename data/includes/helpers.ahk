@@ -15,9 +15,18 @@ AcceptContract()
 	{
 		tmp := UiToScreen(9950, ty)
 		MouseMove, tmp.X, tmp.Y, 0
-		WaitForX(1, 200)
+		WaitForX(1, 100)
 		Send {Click}
 		ty := ty + 3
+	}
+
+	Loop, 34
+	{
+		tmp := UiToScreen(9893, (A_Index * 17) + 502)
+		MouseMove, tmp.X, tmp.Y, 0
+		WaitForX(1, 100)
+		Send {Click}
+
 	}
 }
 
