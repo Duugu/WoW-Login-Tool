@@ -1,4 +1,4 @@
-WoW Login Tool - Version 1.6
+WoW Login Tool - Version 1.7
 
 IMPORTANT:
 Carefully follow the instructions below to set up the tool, otherwise it won't work.
@@ -73,6 +73,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.7
+		- Fixed an issue with switching to realms > 17 in Classic ERA.
+		- Fixed an issue where the first realm name in some switch server lists was empty.
 	r1.6
 		- Tried to fix the contract accept feature for low resolutions
 		- Some translation fixes

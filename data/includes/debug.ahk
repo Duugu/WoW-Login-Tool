@@ -113,7 +113,7 @@ f2::
 	tt := tt . "`n" . tRGBColorLogo.r . "," . tRGBColorLogo.g . "," . tRGBColorLogo.b
 	OutputDebug % tt
 	;tmp := UiToScreen(gGameUiWidgets.CharCreationLogo.x, gGameUiWidgets.CharCreationLogo.y)
-	;MouseMove, tmp.X, tmp.Y, 0
+	MouseMove, tmp.X, tmp.Y, 0
 	;Send {Click}
 return
 

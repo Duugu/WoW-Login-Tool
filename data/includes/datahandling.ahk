@@ -125,7 +125,7 @@ LoadData()
 			{
 				if(InStr(line, "[") > 0)
 				{
-					tLastServerNamesIndex1 := 1
+					tLastServerNamesIndex1 := 0
 					tLastServerNamesIndex2 := 1
 
 					line := SubStr(line, 2, StrLen(line) - 2)
