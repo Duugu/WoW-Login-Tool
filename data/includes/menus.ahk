@@ -739,6 +739,13 @@ InitMenu:
 	}
 	UpdateChilds(gMainMenu.childs[tMainItemN])	
 
+	;menu item 9 - version
+	tMainItemN := 9
+	gMainMenu.childs[tMainItemN] := new baseMenuEntryObject
+	gMainMenu.childs[tMainItemN].parent := gMainMenu
+	gMainMenu.childs[tMainItemN].name := L["Version"] . ": " . gSettingsVersion
+	gMainMenu.childs[tMainItemN].childs := []
+
 	UpdateChilds(gMainMenu)
 
 	;gCurrentMenuItem = gMainMenu
@@ -1081,6 +1088,8 @@ GetNumberOfChars50(silent)
 
 	tCharSlots := gCharUIPositions
 
+	tSpeed := 166
+
 	oldTick := 0
 
 	;go down until first slot is selected > on first char
@@ -1090,18 +1099,18 @@ GetNumberOfChars50(silent)
 	{
 		tCount := tCount + 1
 		Send {down}
-
-		if(tCount > oldTick + 6)
+		OutputDebug % "first round: " . tCount
+		if(tCount > oldTick + 2)
 		{
-			WaitForX(1, 66)
+			WaitForX(1, tSpeed)
 			oldTick := tCount
 		}
 		else
 		{
-			sleep, 66	
+			sleep % tSpeed	
 		}
 		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-		sleep, 10
+		sleep, 100
 	}
 	
 	if(tCount > 50)
@@ -1114,7 +1123,7 @@ GetNumberOfChars50(silent)
 		return 0
 	}
 	
-	oldTick := 9
+	oldTick := 0
 
 	;go down until first slot is selected > number of chars
 	tCount := 0
@@ -1123,18 +1132,21 @@ GetNumberOfChars50(silent)
 	{
 		tCount := tCount + 1
 		Send {down}
-		if(tCount > oldTick + 6)
+		OutputDebug % "second round: " . tCount
+		OutputDebug % "oldTick: " . oldTick
+		if(tCount > oldTick + 2)
 		{
-			WaitForX(1, 66)
+			WaitForX(1, tSpeed)
 			oldTick := tCount
 		}
 		else
 		{
-			sleep, 66	
+			sleep % tSpeed	
 		}
 		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-		sleep, 10
+		sleep, 100
 	}
+	OutputDebug % "result: " . tCount
 
 	if(tCount > 50)
 	{

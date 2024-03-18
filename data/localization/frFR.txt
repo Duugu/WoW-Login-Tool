@@ -104,3 +104,4 @@ Monk==Moine
 Demon_Hunter==Chasseur de démons
 Death_Knight==Chevalier de la mort
 Evoker==Evocateur
+Version==Version

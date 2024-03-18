@@ -104,3 +104,4 @@ Monk==Mönch
 Demon_Hunter==Dämonenjäger
 Death_Knight==Todesritter
 Evoker==Rufer
+Version==Version

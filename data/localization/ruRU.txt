@@ -104,3 +104,4 @@ Monk==Монах
 Demon_Hunter==Охотник на демонов
 Death_Knight==Рыцарь Смерти
 Evoker==Пробудитель
+Version==Версия
