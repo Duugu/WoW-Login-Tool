@@ -161,7 +161,12 @@ IsLoginScreen()
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.LoginScreenLogo.x,gGameUiWidgets.LoginScreenLogo.y)
 	tRGBColorQuit := GetColorAtUiPos(gGameUiWidgets.LoginScreenQuit.x,gGameUiWidgets.LoginScreenQuit.y)
-	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) and (IsColorRange(tRGBColorQuit.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorQuit.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorQuit.b, gGameUiColors.GenericRedButton.b) = true))
+	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true 
+		and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true 
+		and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) 
+		and (IsColorRange(tRGBColorQuit.r, gGameUiColors.GenericRedButton.r) = true 
+		and IsColorRange(tRGBColorQuit.g, gGameUiColors.GenericRedButton.g) = true 
+		and IsColorRange(tRGBColorQuit.b, gGameUiColors.GenericRedButton.b) = true))
 	{
 		rReturnValue := true
 	}
