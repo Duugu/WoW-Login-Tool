@@ -24,7 +24,7 @@ wait==espere
 go right to select a region==use flecha derecha para seleccionar región
 Europe==Europa
 USA==Estados Unidos
-Wrath==La ira del rey exánime
+Cata==Cataclismo
 Classic==Era Clásica
 Retail==Retail
 Not_available==No_disponible

@@ -24,7 +24,7 @@ wait==подождите
 go right to select a region==Перейдите вправо, чтобы выбрать регион
 Europe==Европа
 USA==США
-Wrath==Гнев Короля-лича
+Cata==Катаклизм
 Classic==Классическая эра
 Retail==Актуальный
 Not_available==Недоступен

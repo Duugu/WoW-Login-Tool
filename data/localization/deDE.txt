@@ -24,7 +24,7 @@ wait==Warten
 go right to select a region==Gehe nach rechts, um eine Region auszuwählen
 Europe==Europa
 USA==USA
-Wrath==Wrath of the Lich King
+Cata==Cataclysm
 Classic==Classic Ära
 Retail==Retail
 Not_available==Nicht_verfügbar

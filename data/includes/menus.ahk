@@ -138,7 +138,7 @@ InitMenu:
 								if(gNumberOfCharsOnCurrentRealm < 50)
 								{
 									gIgnoreKeyPress := true
-									tmp := UiToScreen(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x, gGameUiWidgets.ChatSelectionScreenCreateCharButton.y) ;wrath
+									tmp := UiToScreen(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x, gGameUiWidgets.ChatSelectionScreenCreateCharButton.y) ;cata
 									;tmp := UiToScreen(-261, 686) ;classic
 									MouseMove, tmp.X, tmp.Y, 0
 									Send {Click}
