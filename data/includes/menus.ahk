@@ -1084,11 +1084,50 @@ UpdateChilds(menuObj)
 ;------------------------------------------------------------------------------------------
 GetNumberOfChars50(silent)
 {
+	tmp := UiToScreen(-10, 10)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+
+	tCount := 0
+
+	if(gHasSetupGametype == "Retail")
+		{
+			tCount := GetNumberOfChars50Retail(silent)
+		}
+	else
+		{
+			tCount := GetNumberOfChars50Classic(silent)
+		}		
+
+	return tCount
+}
+
+;------------------------------------------------------------------------------------------
+GetNumberOfChars50Retail(silent)
+{
+	tmp := UiToScreen(-10, 10)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+
+	;try filling empty favorite slots
+	UpdateFavoriteSlots()
+
+	GetNumberOfChars50Classic(silent)
+
+}
+
+;------------------------------------------------------------------------------------------
+GetNumberOfChars50Classic(silent)
+{
+	tmp := UiToScreen(-10, 10)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+
 	gIgnoreKeyPress := true
 
 	tCharSlots := gCharUIPositions
 
-	tSpeed := 166
+	tSpeed := 266
 
 	oldTick := 0
 
@@ -1110,7 +1149,7 @@ GetNumberOfChars50(silent)
 			sleep % tSpeed	
 		}
 		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-		sleep, 100
+		sleep, 200
 	}
 	
 	if(tCount > 50)
@@ -1144,7 +1183,7 @@ GetNumberOfChars50(silent)
 			sleep % tSpeed	
 		}
 		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-		sleep, 100
+		sleep, 200
 	}
 	OutputDebug % "result: " . tCount
 
