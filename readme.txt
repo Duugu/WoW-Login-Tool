@@ -11,7 +11,7 @@ If you need help, feel free to ask in our Discord: https://discord.gg/FsfKeqxZV4
 3. Copy all 5 folders.
 4. Browse to the WoW game files. Depending on your setup, this could be "C:\Program Files (x86)\World of Warcraft".
 5. In the WoW game files, open the folder for the version of the game you want to play:
-	- for Cata of the Lich King, open "_classic_"
+	- for Classic Cataclys, open "_classic_"
 	- for Retail open "_retail_"
 	- for Classic Era open "_classic_era_"
 6. Inside this folder, open the Interface folder.
@@ -63,7 +63,7 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 4. Launch the tool. The setup will start.
 
 # What's new for experienced wow menu users
-- The tool works for all versions of the game: Wrath, Retail and Classic Era
+- The tool works for all versions of the game: Cataclysm, Retail and Classic Era
 - There is only one tool for all game versions, regions and languages. The tool will guide you through a quick setup to select the correct game, region, etc. on first start.
 - The tool is (or can be) localised for all languages supported by the game.
 - Page up and down navigates 10 items up or down in menus.
