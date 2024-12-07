@@ -73,6 +73,10 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.9
+
+	
+
 	r1.8
 		- Tried to fix the only first character in the list is recognized issue that some users have. As the root cause of that issue still is unclear, it's just a try. Any feedback if it is working now is highly appreciated.
 		- Added an 9th main menu entry Version without a submenu to output the current WoW Login Tool version.

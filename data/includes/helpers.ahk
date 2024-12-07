@@ -129,3 +129,101 @@ GetLockedRaces()
 
 	return tLockedRaces
 }
+
+
+;------------------------------------------------------------------------------------------
+ScrollUpCharacterList()
+{
+	tmp := UiToScreen(-90, 200)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+	Loop 50
+	{
+		sleep, 10
+		Click, WheelUp
+	}
+}
+
+;------------------------------------------------------------------------------------------
+UpdateFavoriteSlots()
+{
+	if(gHasSetupGametype != "Retail")
+	{
+		return
+	}
+
+	ScrollUpCharacterList()
+
+	WaitForX(1, 1000)
+
+	tmp := UiToScreen(-10, 10)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+
+
+	tDone := false
+	while(tDone = false)
+	{
+		tFavoriteSlots := {1: 1, 2: 1, 3: 1, 4: 1}
+
+		Loop % tFavoriteSlots.Length()
+		{
+			tSlotNumber := A_Index
+			tRGBColor := GetColorAtUiPos(gCharUIPositions[tSlotNumber].x,gCharUIPositions[tSlotNumber].y)
+			if (IsColorRange(tRGBColor.r, gGameUiColors.CharListFavoritesSlotEmpty.r) = true and IsColorRange(tRGBColor.g, gGameUiColors.CharListFavoritesSlotEmpty.g) = true and IsColorRange(tRGBColor.b, gGameUiColors.CharListFavoritesSlotEmpty.b) = true)
+				{
+					tFavoriteSlots[tSlotNumber] := false
+				}
+		}
+		;MsgBox % tFavoriteSlots[1] tFavoriteSlots[2] tFavoriteSlots[3] tFavoriteSlots[4] 
+		if(tFavoriteSlots[1] = 1 && tFavoriteSlots[2] = 1 && tFavoriteSlots[3] = 1 && tFavoriteSlots[4] = 1)
+		{
+			tDone := true
+			;MsgBox, finished
+			return
+		}
+
+		else
+		{
+			Loop % tFavoriteSlots.Length()
+			{
+				tSlotNumber := A_Index
+				if(tFavoriteSlots[tSlotNumber] = 0)
+				{
+					tFoundSomething := false
+					;MsgBox % "updating " tSlotNumber
+					tStart := tSlotNumber
+					tCount := 8 - tStart
+					Loop % tCount
+					{
+						tSourceSlotNumber := A_Index + tStart
+						;MsgBox % "checking " tSourceSlotNumber
+						tRGBColor := GetColorAtUiPos(gCharUIPositions[tSourceSlotNumber].x,gCharUIPositions[tSourceSlotNumber].y)
+						if ((IsColorRange(tRGBColor.r, gGameUiColors.CharListFavoritesSlotEmpty.r) = true and IsColorRange(tRGBColor.g, gGameUiColors.CharListFavoritesSlotEmpty.g) = true and IsColorRange(tRGBColor.b, gGameUiColors.CharListFavoritesSlotEmpty.b) = true) = false && (IsColorRange(tRGBColor.r, gGameUiColors.CharListRegularSlotEmpty.r) = true and IsColorRange(tRGBColor.g, gGameUiColors.CharListRegularSlotEmpty.g) = true and IsColorRange(tRGBColor.b, gGameUiColors.CharListRegularSlotEmpty.b) = true) = false)
+						{
+							;MsgBox % "moving " tSourceSlotNumber " to " tSlotNumber
+							tFoundSomething := true
+							tmp := UiToScreen(gCharUIPositions[tSourceSlotNumber].x,gCharUIPositions[tSourceSlotNumber].y)
+							MouseMove, tmp.X, tmp.Y, 0
+							sleep, 500
+							Click, down
+							sleep, 500
+							tmp := UiToScreen(gCharUIPositions[tSlotNumber].x,gCharUIPositions[tSlotNumber].y)
+							MouseMove, tmp.X, tmp.Y, 0
+							sleep, 500
+							Click, up
+							sleep, 500
+							break	
+						}
+					}
+				}
+				if(tFoundSomething = false)
+				{
+					tDone := true
+				}
+			}
+		}		
+	}
+	;MsgBox, finished 1
+	return
+}

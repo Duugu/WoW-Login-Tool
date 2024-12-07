@@ -93,7 +93,7 @@ debugtooltip:
 	}
 return
 
-*/
+
 f1::
 AcceptContract()
 return
@@ -139,7 +139,11 @@ F3::
 	OutputDebug % "IsContract: " . IsContract()
 	OutputDebug % "IsRealmListScrollbar: " . IsRealmListScrollbar()
 	OutputDebug % "IsCharCreationScreen: " . IsCharCreationScreen()
-	
+	OutputDebug % "IsWoWWindowFocus: " . IsWoWWindowFocus()
+	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
+
+	OutputDebug % "tRGBColorLogo.r: " . tRGBColorLogo.r
+	OutputDebug % "gGameUiColors.CharSelectionScreenLogo.r: " . gGameUiColors.CharSelectionScreenLogo.r
 	;ListVars
 	;Pause, On
 return
@@ -148,5 +152,53 @@ NumpadAdd::
 	Pause, Off
 	
 return
+*/
+
+
+
+/*
+
+
+SetTimer, aaa, 250
+aaa:
+
+	MouseGetPos, OutputVarX, OutputVarY
+	Width := 2
+	;Height := Height / 2 - (Height / 10)
+	;CoordMode, Mouse, Screen
+	;MouseMove, %Width%, %Height%
+	;ToolTip, Multiline`nTooltip, 100, 150
+
+	ui := ScreenToUi(OutputVarX, OutputVarY)
+	uix := floor(ui.x)
+	uiy := floor(ui.y)
+   tRGBColor := GetColorAtUiPos(uix, uiy)
+   r := tRGBColor.r
+   g := tRGBColor.g
+   b := tRGBColor.b
+
+
+
+	tmpUI := UiToScreen(uix, uiy)
+	screenx := floor(tmpUI.X)
+	screeny := floor(tmpUI.Y)
+
+	ToolTip, %OutputVarX% - %OutputVarY%`n%uix% - %uiy%`n%screenx% - %screeny%`n%r% - %g% - %b%
+return
+*/
+
+f2::
+	uix := floor(-75)
+	uiy := floor(275)
+	tmpUI := UiToScreen(uix, uiy)
+	MouseMove, floor(tmpUI.X), floor(tmpUI.Y), 0
+	;Send {Click}
+return
+
+f1::
+   
+GetNumberOfChars50Classic(false)
+return
+
 
 
