@@ -959,30 +959,36 @@ gMainMenuchilds1ChildsXGenericAction(this, charNumber) ;unfortunately this ugly 
 {
 	gIgnoreKeyPress := true
 
-	tCharSlots := {1:{x:-45,y:100},2:{x:-45,y:155},3:{x:-45,y:210},4:{x:-45,y:270},5:{x:-45,y:330},6:{x:-45,y:380},7:{x:-45,y:450},8:{x:-45,y:510},9:{x:-45,y:560},10:{x:-45,y:610}}
+	tCharSlots := gCharUIPositions
 
 	tIMode := mode
 
+	tmp := UiToScreen(-10, 10)
+	MouseMove, tmp.X, tmp.Y, 0
+	sleep, 200
+
+	tSpeed := 266
+	oldTick := 0
+
+	;go down until first slot is selected > on first char
 	tCount := 0
-	tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-	while(tResult != true && tCount <= 50)
+	tResult := false
+	while(tResult != true and tCount <= 50)
 	{
-		Send {Up}
-		sleep, 66
-		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
-		sleep, 10
 		tCount := tCount + 1
-		if((tCount / 10) - Ceil(tCount / 10) == 0)
+		Send {down}
+		OutputDebug % "first round: " . tCount
+		if(tCount > oldTick + 2)
 		{
-			mode := 1
-			WaitForX(1, 100)
-			mode := tIMode
+			WaitForX(1, tSpeed)
+			oldTick := tCount
 		}
-	}
-	if(tResult != true)
-	{
-		gIgnoreKeyPress := false
-		return 0
+		else
+		{
+			sleep % tSpeed	
+		}
+		tResult := IsWhiteUI(tCharSlots[1].x,tCharSlots[1].y)
+		sleep, 200
 	}
 
 	tCount := 0
@@ -1112,8 +1118,9 @@ GetNumberOfChars50Retail(silent)
 	;try filling empty favorite slots
 	UpdateFavoriteSlots()
 
-	GetNumberOfChars50Classic(silent)
+	tCount := GetNumberOfChars50Classic(silent)
 
+	return tCount
 }
 
 ;------------------------------------------------------------------------------------------

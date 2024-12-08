@@ -158,7 +158,7 @@ UpdateFavoriteSlots()
 
 	tmp := UiToScreen(-10, 10)
 	MouseMove, tmp.X, tmp.Y, 0
-	sleep, 200
+	WaitForX(1, 200)
 
 
 	tDone := false
@@ -205,16 +205,17 @@ UpdateFavoriteSlots()
 							tFoundSomething := true
 							tmp := UiToScreen(gCharUIPositions[tSourceSlotNumber].x,gCharUIPositions[tSourceSlotNumber].y)
 							MouseMove, tmp.X, tmp.Y, 0
-							sleep, 500
+							WaitForX(1, 500)
 							Click, down
-							sleep, 500
+							WaitForX(1, 500)
 							tmp := UiToScreen(gCharUIPositions[tSlotNumber].x,gCharUIPositions[tSlotNumber].y)
 							MouseMove, tmp.X, tmp.Y, 0
-							sleep, 500
+							WaitForX(1, 500)
 							Click, up
-							sleep, 500
+							WaitForX(1, 500)
 							break	
 						}
+						WaitForX(1, 100)
 					}
 				}
 				if(tFoundSomething = false)

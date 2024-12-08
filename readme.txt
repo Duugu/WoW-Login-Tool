@@ -11,7 +11,7 @@ If you need help, feel free to ask in our Discord: https://discord.gg/FsfKeqxZV4
 3. Copy all 5 folders.
 4. Browse to the WoW game files. Depending on your setup, this could be "C:\Program Files (x86)\World of Warcraft".
 5. In the WoW game files, open the folder for the version of the game you want to play:
-	- for Classic Cataclys, open "_classic_"
+	- for Classic Cataclysm, open "_classic_"
 	- for Retail open "_retail_"
 	- for Classic Era open "_classic_era_"
 6. Inside this folder, open the Interface folder.

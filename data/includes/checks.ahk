@@ -182,9 +182,9 @@ IsCharSelectionScreen()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
+	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
 
-	if (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true))))
+	if (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true))))
 	{
 		rReturnValue := true
 	}
@@ -250,10 +250,11 @@ IsContract()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
+	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
+
 	tRGBColorTitleBackdrop := GetColorAtUiPos(9852, 284)
 
-	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionContractLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionContractLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionContractLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.CharSelectionContractAddons.b) = true) and (IsColorRange(tRGBColorTitleBackdrop.r, gGameUiColors.GenericBlack.r) = true and IsColorRange(tRGBColorTitleBackdrop.g, gGameUiColors.GenericBlack.g) = true and IsColorRange(tRGBColorTitleBackdrop.b, gGameUiColors.GenericBlack.b) = true))
+	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionContractLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionContractLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionContractLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.CharSelectionContractAddons.b) = true) and (IsColorRange(tRGBColorTitleBackdrop.r, gGameUiColors.GenericBlack.r) = true and IsColorRange(tRGBColorTitleBackdrop.g, gGameUiColors.GenericBlack.g) = true and IsColorRange(tRGBColorTitleBackdrop.b, gGameUiColors.GenericBlack.b) = true))
 	{
 		rReturnValue := true
 	}
@@ -268,10 +269,10 @@ IsOutdatedAddonsWarning()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
+	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
 	tRGBColorTitleBackdrop := GetColorAtUiPos(830,410)
 
-	if ((((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, 50) = true and IsColorRange(tRGBColorLogo.g, 57) = true and IsColorRange(tRGBColorLogo.b, 0) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.CharSelectionContractAddons.b) = true)))) and (IsColorRange(tRGBColorTitleBackdrop.r, 0) = true and IsColorRange(tRGBColorTitleBackdrop.g, 40) = true and IsColorRange(tRGBColorTitleBackdrop.b, 0) = true))
+	if ((((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, 50) = true and IsColorRange(tRGBColorLogo.g, 57) = true and IsColorRange(tRGBColorLogo.b, 0) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.CharSelectionContractAddons.b) = true)))) and (IsColorRange(tRGBColorTitleBackdrop.r, 0) = true and IsColorRange(tRGBColorTitleBackdrop.g, 40) = true and IsColorRange(tRGBColorTitleBackdrop.b, 0) = true))
 	{
 		rReturnValue := true
 	}
