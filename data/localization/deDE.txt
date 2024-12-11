@@ -105,3 +105,8 @@ Demon_Hunter==Dämonenjäger
 Death_Knight==Todesritter
 Evoker==Rufer
 Version==Version
+Anniversary==Jubiläum
+hardcore==hardcore
+hardcore_pve==hardcore_pve
+hardcore_pvp==hardcore_pvp
+hardcore_rp==hardcore_rp

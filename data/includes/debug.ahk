@@ -185,7 +185,7 @@ aaa:
 
 	ToolTip, %OutputVarX% - %OutputVarY%`n%uix% - %uiy%`n%screenx% - %screeny%`n%r% - %g% - %b%
 return
-*/
+
 
 f2::
 	uix := floor(-75)
@@ -202,3 +202,4 @@ return
 
 
 
+*/

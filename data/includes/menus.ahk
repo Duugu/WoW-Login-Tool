@@ -139,7 +139,6 @@ InitMenu:
 								{
 									gIgnoreKeyPress := true
 									tmp := UiToScreen(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x, gGameUiWidgets.ChatSelectionScreenCreateCharButton.y) ;cata
-									;tmp := UiToScreen(-261, 686) ;classic
 									MouseMove, tmp.X, tmp.Y, 0
 									Send {Click}
 	
@@ -213,18 +212,11 @@ InitMenu:
 									Send {Click}
 									WaitForX(2, 500)
 	
-									;random style
-									/*
-									tmp := UiToScreen(90, 737)
-									MouseMove, tmp.X, tmp.Y, 0
-									Send {Click}
-									*/
-	
 									if(gHasSetupGametype = "Retail")
 									{
 										;click on preview
 										WaitForX(2, 500)
-										tmp := UiToScreen(-115,729)
+										tmp := UiToScreen(gGameUiWidgets.CharCreationRetailCustomizeButton.x, gGameUiWidgets.CharCreationRetailCustomizeButton.y)
 										MouseMove, tmp.X, tmp.Y, 0
 										Send {Click}
 									}
@@ -333,7 +325,7 @@ InitMenu:
 							}
 
 							;click on "select realm"
-							tmp := UiToScreen(-191, 51)
+							tmp := UiToScreen(gGameUiWidgets.CharSelectionRealmsButton.x, gGameUiWidgets.CharSelectionRealmsButton.y)
 							MouseMove, tmp.X, tmp.Y, 0
 							Send {Click}
 
@@ -364,18 +356,31 @@ InitMenu:
 						WaitForX(1, 500)
 
 						;click on sort by type
-						tmp := UiToScreen(9985, 168)
+						tmp := UiToScreen(gGameUiWidgets.RealmSelectionSorttypeHeader.x, gGameUiWidgets.RealmSelectionSorttypeHeader.y)
+						
 						MouseMove, tmp.X, tmp.Y, 0
 						Send {Click}
 						WaitForX(1, 500)
 
 						;click on sort by name
-						tmp := UiToScreen(9735, 168)
+						tmp := UiToScreen(gGameUiWidgets.RealmSelectionSortnameHeader.x, gGameUiWidgets.RealmSelectionSortnameHeader.y)
 						MouseMove, tmp.X, tmp.Y, 0
 						Send {Click}
 						WaitForX(1, 500)
 
-						if(IsRealmListScrollbar() == true)
+						tIsScrollBar := false
+						if(gHasSetupGametype = "Classic")
+							{
+								if(ObjMaxIndex(gServerNames[langNumber]) > 17)
+									tIsScrollBar := true
+							}
+						else
+							{
+								if(ObjMaxIndex(gServerNames[langNumber]) > 20)
+									tIsScrollBar := true
+							}
+
+						if(tIsScrollBar == true)
 						{
 							tServersPerScrollPage := 20
 							tServersPerScrollPageStep := 2
@@ -386,10 +391,13 @@ InitMenu:
 							}
 
 							;click on server with scrollable list
-							tmp := UiToScreen(9735, 368)
+
+							;click on list to scroll up
+							tmp := UiToScreen(gGameUiWidgets.SwitchRealmListCenterPos.x, gGameUiWidgets.SwitchRealmListCenterPos.y)
 							MouseMove, tmp.X, tmp.Y, 0
 							WaitForX(1, 500)
 
+							;scroll up
 							Loop % (4)
 							{
 								Loop % (20)
@@ -400,6 +408,7 @@ InitMenu:
 								WaitForX(1, 20)
 							}
 
+							;scroll down to selected realm
 							tNumberOfFullPages := (Ceil(ObjMaxIndex(gServerNames[langNumber]) / tServersPerScrollPage) - 1)
 							tServerOnPageNumber := (Ceil(serverNumber / tServersPerScrollPage))
 
@@ -427,6 +436,7 @@ InitMenu:
 
 							WaitForX(1, 100)
 
+							;select realm
 							tmp := UiToScreen(gServerNames[langNumber][serverNumber].x,(gServerNames[langNumber][tEntryNumberInList].y))
 							if(tServerOnPageNumber > tNumberOfFullPages && serverNumber == ObjMaxIndex(gServerNames[langNumber]))
 							{
@@ -436,7 +446,6 @@ InitMenu:
 							{
 								MouseMove, tmp.X, tmp.Y, 0
 							}
-
 							WaitForX(1, 100)
 							Send {Click}
 							WaitForX(1, 500)
@@ -444,7 +453,7 @@ InitMenu:
 						else
 						{
 							WaitForX(1, 500)
-							;click on server with no scrollable list
+							;click on realm with no scrollable list
 							tmp := UiToScreen(gServerNames[langNumber][serverNumber].x,gServerNames[langNumber][serverNumber].y)
 							MouseMove, tmp.X, tmp.Y, 0
 							Send {Click}
@@ -480,12 +489,11 @@ InitMenu:
 						MouseMove, tmp.X, tmp.Y, 0
 						Send {Click}
 
-
-
+						;check for high pop warning and click away
 						WaitForX(4, 500)
 						if(IsHighPopServerWarning() = true)
 						{
-							tmp := UiToScreen(9810, 436)
+							tmp := UiToScreen(gGameUiWidgets.SwitchRealmHighPopWarnOkButton.x, gGameUiWidgets.SwitchRealmHighPopWarnOkButton.y)
 							MouseMove, tmp.X, tmp.Y, 0
 							Send {Click}
 							WaitForX(1, 500)
@@ -495,11 +503,11 @@ InitMenu:
 
 						WaitForX(4, 500)
 
-						;click away any hc warning
+						;check and click away any hc warning
 						if(IsRealmQueue() != true)
 						{
 							WaitForX(4, 500)
-							tmp := UiToScreen(9942, 442)
+							tmp := UiToScreen(gGameUiWidgets.SwitchRealmHcWarnOkButton.x, gGameUiWidgets.SwitchRealmHcWarnOkButton.y)
 							MouseMove, tmp.X, tmp.Y, 0
 							Send {Click}
 						}
@@ -528,9 +536,6 @@ InitMenu:
 							{
 								if(IsCharCreationScreen() = true)
 								{
-									;not chars > back to char sel
-									;tmp := UiToScreen(-160, 749)
-									;MouseMove, tmp.X, tmp.Y, 0
 									Send {Esc}
 									WaitForX(1, 500)
 								}
@@ -963,7 +968,7 @@ gMainMenuchilds1ChildsXGenericAction(this, charNumber) ;unfortunately this ugly 
 
 	tIMode := mode
 
-	tmp := UiToScreen(-10, 10)
+	tmp := UiToScreen(gGameUiWidgets.CharSelectionScreenSafeMousePos.x, gGameUiWidgets.CharSelectionScreenSafeMousePos.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 200
 
@@ -1090,7 +1095,7 @@ UpdateChilds(menuObj)
 ;------------------------------------------------------------------------------------------
 GetNumberOfChars50(silent)
 {
-	tmp := UiToScreen(-10, 10)
+	tmp := UiToScreen(gGameUiWidgets.CharSelectionScreenSafeMousePos.x, gGameUiWidgets.CharSelectionScreenSafeMousePos.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 200
 
@@ -1111,7 +1116,7 @@ GetNumberOfChars50(silent)
 ;------------------------------------------------------------------------------------------
 GetNumberOfChars50Retail(silent)
 {
-	tmp := UiToScreen(-10, 10)
+	tmp := UiToScreen(gGameUiWidgets.CharSelectionScreenSafeMousePos.x, gGameUiWidgets.CharSelectionScreenSafeMousePos.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 200
 
@@ -1126,7 +1131,7 @@ GetNumberOfChars50Retail(silent)
 ;------------------------------------------------------------------------------------------
 GetNumberOfChars50Classic(silent)
 {
-	tmp := UiToScreen(-10, 10)
+	tmp := UiToScreen(gGameUiWidgets.CharSelectionScreenSafeMousePos.x, gGameUiWidgets.CharSelectionScreenSafeMousePos.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 200
 
@@ -1252,7 +1257,7 @@ EnterCharacterNameHandler()
 		WaitForX(1, 1000)
 
 		;click away possible hardcore warning
-		tmp := UiToScreen(9951,552)
+		tmp := UiToScreen(gGameUiWidgets.CreateCharHcWarningOkButton.x, gGameUiWidgets.CreateCharHcWarningOkButton.y)
 		MouseMove, tmp.X, tmp.Y, 0
 		Send {Click}
 		WaitForX(1, 1000)
@@ -1360,7 +1365,7 @@ DeleteCharacterNameHandler()
 			else if(IsDeleteButtonEnabled() = true)
 			{
 				gDeleteCharacterNameFlag := false
-				tmpScreen := UiToScreen(9796, 437)
+				tmpScreen := UiToScreen(gGameUiWidgets.CharDeleteConfirmButton.x, gGameUiWidgets.CharDeleteConfirmButton.y)
 				MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 				PlayUtterance(L["character deleted"])
 				Send {Click}

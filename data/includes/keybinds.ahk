@@ -239,10 +239,6 @@ return
 
 			sleep 1500
 
-			;tmp := UiToScreen(-104, 706)
-			;tmp := UiToScreen(-104, 706)
-			;MouseMove, tmp.X, tmp.Y, 0
-
 			tTimeout := 0
 			while(IsCharSelectionScreen() != true)
 			{
@@ -274,8 +270,6 @@ return
 
 			if (IsDeleteCancelButton() = true)
 			{
-				;tmp := UiToScreen(10195, 437)
-				;MouseMove, tmp.X, tmp.Y, 0
 				Send {Esc}
 			}
 

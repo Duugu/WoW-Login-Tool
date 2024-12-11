@@ -105,3 +105,8 @@ Demon_Hunter==Охотник на демонов
 Death_Knight==Рыцарь Смерти
 Evoker==Пробудитель
 Version==Версия
+Anniversary==Юбилей
+hardcore==хардкор
+hardcore_pve==хардкор_pve
+hardcore_pvp==хардкор_pvp
+hardcore_rp==хардкор_rp

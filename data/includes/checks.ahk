@@ -1,6 +1,15 @@
 ﻿;------------------------------------------------------------------------------------------
 IsRealmQueue()
 {
+	/*
+	Apparently there are no realm queues anymore. If, I can't test, as I can't reproduce the popup.
+	Therefore we are ignoring this for now. Always returning false.
+	*/
+	return false
+
+	/*
+	Orginal code
+	*/
 	rReturnValue := true
 
 	tmpUI := UiToScreen(9799, 450)
@@ -20,7 +29,7 @@ IsRealmQueue()
 		rReturnValue := false
 	}
 
-	tmpUI := UiToScreen(10194, 450)
+	tmpUI := UiToScreen(gGameUiWidgets.CharSelectionRealmsButton.x, gGameUiWidgets.CharSelectionRealmsButton.y)
 
 		MouseMove, tmpUI.X, tmpUI.Y, 0
 		sleep, 100
@@ -63,6 +72,7 @@ IsRealmQueue()
 		global gInQueue := false
 	}
 
+	OutputDebug % "IsRealmQueue" rReturnValue
 	return rReturnValue
 
 }
@@ -119,6 +129,7 @@ IsIngame()
 	}
 
 
+	OutputDebug % "IsIngame" rReturnValue
 	return rReturnValue
 }
 
@@ -132,6 +143,7 @@ IsGlue()
 		rReturnValue := true
 	}
 
+	OutputDebug % "IsGlue" rReturnValue
 	return rReturnValue
 }
 
@@ -150,6 +162,7 @@ IsLoginScreenInitialStart()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsLoginScreenInitialStart" rReturnValue
 	return rReturnValue
 }
 
@@ -172,6 +185,7 @@ IsLoginScreen()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsLoginScreen" rReturnValue
 	return rReturnValue
 }
 
@@ -182,14 +196,15 @@ IsCharSelectionScreen()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
+	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
 
-	if (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true))))
+	if (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionScreenLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionScreenLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionScreenLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true))))
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsCharSelectionScreen" rReturnValue
 	return rReturnValue
 }
 
@@ -207,6 +222,7 @@ IsCharCreationScreen()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsCharCreationScreen" rReturnValue
 	return rReturnValue
 }
 
@@ -216,14 +232,15 @@ IsRealmSelectionScreen()
 	gIgnoreKeyPress := true
 	rReturnValue := false
 
-	tRGBColorTitleBackdrop := GetColorAtUiPos(9952, 126)
-	tRGBColorListBackdrop := GetColorAtUiPos(404, 145)
+	tRGBColorTitleBackdrop := GetColorAtUiPos(gGameUiWidgets.RealmSelectionTitleBackdrop.x, gGameUiWidgets.RealmSelectionTitleBackdrop.y)
+	tRGBColorListBackdrop := GetColorAtUiPos(gGameUiWidgets.RealmSelectionListBackdrop.x, gGameUiWidgets.RealmSelectionListBackdrop.y)
 	if ((IsColorRange(tRGBColorTitleBackdrop.r, gGameUiColors.RealmSelectionTitleBackdrop.r) = true and IsColorRange(tRGBColorTitleBackdrop.g, gGameUiColors.RealmSelectionTitleBackdrop.g) = true and IsColorRange(tRGBColorTitleBackdrop.b, gGameUiColors.RealmSelectionTitleBackdrop.b) = true) and (IsColorRange(tRGBColorListBackdrop.r, gGameUiColors.RealmSelectionListBackdrop.r) = true and IsColorRange(tRGBColorListBackdrop.g, gGameUiColors.RealmSelectionListBackdrop.g) = true and IsColorRange(tRGBColorListBackdrop.b, gGameUiColors.RealmSelectionListBackdrop.b) = true))
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsRealmSelectionScreen" rReturnValue
 	return rReturnValue
 }
 
@@ -240,6 +257,7 @@ IsRealmListScrollbar()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsRealmListScrollbar" rReturnValue
 	return rReturnValue
 }
 
@@ -250,15 +268,15 @@ IsContract()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
-
+	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
 	tRGBColorTitleBackdrop := GetColorAtUiPos(9852, 284)
 
-	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionContractLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionContractLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionContractLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.CharSelectionContractAddons.b) = true) and (IsColorRange(tRGBColorTitleBackdrop.r, gGameUiColors.GenericBlack.r) = true and IsColorRange(tRGBColorTitleBackdrop.g, gGameUiColors.GenericBlack.g) = true and IsColorRange(tRGBColorTitleBackdrop.b, gGameUiColors.GenericBlack.b) = true))
+	if ((IsColorRange(tRGBColorLogo.r, gGameUiColors.CharSelectionContractLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.CharSelectionContractLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.CharSelectionContractLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.CharSelectionContractAddons.b) = true) and (IsColorRange(tRGBColorTitleBackdrop.r, gGameUiColors.GenericBlack.r) = true and IsColorRange(tRGBColorTitleBackdrop.g, gGameUiColors.GenericBlack.g) = true and IsColorRange(tRGBColorTitleBackdrop.b, gGameUiColors.GenericBlack.b) = true))
 	{
 		rReturnValue := true
 	}
 	gIgnoreKeyPress := false
+	OutputDebug % "IsContract" rReturnValue
 	return rReturnValue
 }
 
@@ -269,15 +287,16 @@ IsOutdatedAddonsWarning()
 	rReturnValue := false
 
 	tRGBColorLogo := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenLogo.x,gGameUiWidgets.CharSelectionScreenLogo.y)
-	tRGBColorCreateCharButton := GetColorAtUiPos(gGameUiWidgets.ChatSelectionScreenCreateCharButton.x,gGameUiWidgets.ChatSelectionScreenCreateCharButton.y)
-	tRGBColorTitleBackdrop := GetColorAtUiPos(830,410)
+	tRGBColorAddons := GetColorAtUiPos(gGameUiWidgets.CharSelectionScreenAddons.x,gGameUiWidgets.CharSelectionScreenAddons.y)
+	tRGBColorTitleBackdrop := GetColorAtUiPos(gGameUiWidgets.OutdatedAddonsWarningBackdrop.x, gGameUiWidgets.OutdatedAddonsWarningBackdrop.y)
 
-	if ((((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, 50) = true and IsColorRange(tRGBColorLogo.g, 57) = true and IsColorRange(tRGBColorLogo.b, 0) = true) and (IsColorRange(tRGBColorCreateCharButton.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorCreateCharButton.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorCreateCharButton.b, gGameUiColors.CharSelectionContractAddons.b) = true)))) and (IsColorRange(tRGBColorTitleBackdrop.r, 0) = true and IsColorRange(tRGBColorTitleBackdrop.g, 40) = true and IsColorRange(tRGBColorTitleBackdrop.b, 0) = true))
+	if ((((IsColorRange(tRGBColorLogo.r, gGameUiColors.GenericLogo.r) = true and IsColorRange(tRGBColorLogo.g, gGameUiColors.GenericLogo.g) = true and IsColorRange(tRGBColorLogo.b, gGameUiColors.GenericLogo.b) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.GenericRedButton.b) = true)) or (((IsColorRange(tRGBColorLogo.r, 50) = true and IsColorRange(tRGBColorLogo.g, 57) = true and IsColorRange(tRGBColorLogo.b, 0) = true) and (IsColorRange(tRGBColorAddons.r, gGameUiColors.CharSelectionContractAddons.r) = true and IsColorRange(tRGBColorAddons.g, gGameUiColors.CharSelectionContractAddons.g) = true and IsColorRange(tRGBColorAddons.b, gGameUiColors.CharSelectionContractAddons.b) = true)))) and (IsColorRange(tRGBColorTitleBackdrop.r, 0) = true and IsColorRange(tRGBColorTitleBackdrop.g, 40) = true and IsColorRange(tRGBColorTitleBackdrop.b, 0) = true))
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsOutdatedAddonsWarning" rReturnValue
 	return rReturnValue
 }
 
@@ -287,13 +306,15 @@ IsHighPopServerWarning()
 	gIgnoreKeyPress := true
 	rReturnValue := false
 
-	tRGBColor := GetColorAtUiPos(9810, 436)
+		
+	tRGBColor := GetColorAtUiPos(gGameUiWidgets.SwitchRealmHighPopWarnOkButton.x, gGameUiWidgets.SwitchRealmHighPopWarnOkButton.y)
 	if (IsColorRange(tRGBColor.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColor.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColor.b, gGameUiColors.GenericRedButton.b) = true)
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsHighPopServerWarning" rReturnValue
 	return rReturnValue
 }
 
@@ -310,6 +331,7 @@ IsDisconnected()
 	}
 	;MsgBox % rReturnValue
 	gIgnoreKeyPress := false
+	OutputDebug % "IsDisconnected" rReturnValue
 	return rReturnValue
 }
 
@@ -326,6 +348,7 @@ IsDeleteButtonEnabled()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsDeleteButtonEnabled" rReturnValue
 	return rReturnValue
 }
 
@@ -342,6 +365,7 @@ IsDeleteButtonDisabled()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsDeleteButtonDisabled" rReturnValue
 	return rReturnValue
 }
 
@@ -358,6 +382,7 @@ IsDeleteCancelButton()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsDeleteCancelButton" rReturnValue
 	return rReturnValue
 }
 /*
@@ -405,6 +430,7 @@ Is12Popup()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "Is12Popup" rReturnValue
 	return rReturnValue
 }
 
@@ -425,6 +451,7 @@ Is22Popup()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "Is22Popup" rReturnValue
 	return rReturnValue
 }
 
@@ -444,6 +471,7 @@ Is11Popup()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "Is11Popup" rReturnValue
 	return rReturnValue
 }
 
@@ -463,6 +491,7 @@ Is21Popup()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "Is21Popup" rReturnValue
 	return rReturnValue
 }
 
@@ -472,14 +501,15 @@ IsDeleteCharPopup()
 	gIgnoreKeyPress := true
 	rReturnValue := false
 
-	tRGBColorBackdrop := GetColorAtUiPos(450, 331)
-	tRGBColorEditbox := GetColorAtUiPos(10057, 400)
+	tRGBColorBackdrop := GetColorAtUiPos(gGameUiWidgets.DeleteCharPopupBackdrop.x, gGameUiWidgets.DeleteCharPopupBackdrop.y)
+	tRGBColorEditbox := GetColorAtUiPos(gGameUiWidgets.DeleteCharPopupEditBox.x, gGameUiWidgets.DeleteCharPopupEditBox.y)
 	if (IsColorRange(tRGBColorBackdrop.r, 0) = true and IsColorRange(tRGBColorBackdrop.g, 40) = true and IsColorRange(tRGBColorBackdrop.b, 0) = true) and (IsColorRange(tRGBColorEditbox.r, 3) = true and IsColorRange(tRGBColorEditbox.g, 17) = true and IsColorRange(tRGBColorEditbox.b, 3) = true)
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsDeleteCharPopup" rReturnValue
 	return rReturnValue
 }
 
@@ -488,14 +518,15 @@ IsReconnect()
 {
 	gIgnoreKeyPress := true
 	rReturnValue := false
-
-	tRGBColor := GetColorAtUiPos(9917, 441)
+	
+	tRGBColor := GetColorAtUiPos(gGameUiWidgets.LoginScreenReconnectButton.x, gGameUiWidgets.LoginScreenReconnectButton.y)
 	if (IsColorRange(tRGBColor.r, gGameUiColors.GenericRedButton.r) = true and IsColorRange(tRGBColor.g, gGameUiColors.GenericRedButton.g) = true and IsColorRange(tRGBColor.b, gGameUiColors.GenericRedButton.b) = true)
 	{
 		rReturnValue := true
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsReconnect" rReturnValue
 	return rReturnValue
 }
 
@@ -512,6 +543,7 @@ IsConnectingToGame()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsConnectingToGame" rReturnValue
 	return rReturnValue
 }
 
@@ -539,5 +571,6 @@ IsCharCreattionPreviewButtonDisabled()
 	}
 
 	gIgnoreKeyPress := false
+	OutputDebug % "IsCharCreattionPreviewButtonDisabled" rReturnValue
 	return rReturnValue
 }

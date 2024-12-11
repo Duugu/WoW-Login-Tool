@@ -105,3 +105,8 @@ Demon_Hunter==Demon Hunter
 Death_Knight==Death Knight
 Evoker==Evoker
 Version==Version
+Anniversary==Anniversary
+hardcore==hardcore
+hardcore_pve==hardcore_pve
+hardcore_pvp==hardcore_pvp
+hardcore_rp==hardcore_rp

@@ -171,26 +171,14 @@ InitLogin()
 	WaitForX(4, 500)
 	if(IsOutdatedAddonsWarning() = true)
 	{
-		tmpScreen := UiToScreen(740,410)
-		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-		Send {Click}
-		Sleep, 1000
-		tmpScreen := UiToScreen(640,440)
-		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-		Send {Click}
+		ClickAwayOutdateAddonsWarning()
 	}
 	WaitForX(4, 500)
 
 
 	if(IsOutdatedAddonsWarning() = true)
 	{
-		tmpScreen := UiToScreen(740,410)
-		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-		Send {Click}
-		Sleep, 1000
-		tmpScreen := UiToScreen(640,440)
-		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-		Send {Click}
+		ClickAwayOutdateAddonsWarning()
 	}
 	if(IsContract() = true)
 	{
@@ -209,13 +197,7 @@ InitLogin()
 
 		if(IsOutdatedAddonsWarning() = true)
 		{
-			tmpScreen := UiToScreen(740,410)
-			MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-			Send {Click}
-			Sleep, 1000
-			tmpScreen := UiToScreen(640,440)
-			MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
-			Send {Click}
+			ClickAwayOutdateAddonsWarning()
 		}
 		if(IsContract() = true)
 		{
@@ -224,7 +206,7 @@ InitLogin()
 
 		if(IsDeleteCharPopup() = true)
 		{
-			tmpScreen := UiToScreen(10195, 437)
+			tmpScreen := UiToScreen(gGameUiWidgets.DeleteCharPopupOkButton.x, gGameUiWidgets.DeleteCharPopupOkButton.y)
 			MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 			Send {Click}
 		}
@@ -301,9 +283,8 @@ InitLogin()
 				if(IsReconnect() = true)
 				{
 					;click on reconnect
-					;MsgBox Reconnect
 					tPopupClosed := true
-					tmpScreen := UiToScreen(9917, 441)
+					tmpScreen := UiToScreen(gGameUiWidgets.LoginScreenReconnectButton.x, gGameUiWidgets.LoginScreenReconnectButton.y)
 					MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 					Send {Click}
 				}
@@ -312,7 +293,7 @@ InitLogin()
 	}
 	else if(IsRealmSelectionScreen() = true)
 	{
-		tmpScreen := UiToScreen(-403, 606)
+		tmpScreen := UiToScreen(gGameUiWidgets.RealmSelectionCancelButton.x, gGameUiWidgets.RealmSelectionCancelButton.y)
 		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Click} ;cancel
 
@@ -337,8 +318,6 @@ InitLogin()
 	}
 	else if(IsCharCreationScreen() = true)
 	{
-		;tmpScreen := UiToScreen(-160, 749)
-		;MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Esc} ;back
 
 		tTimeout := 0

@@ -74,8 +74,13 @@ Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login
 
 # Release Notes
 	r1.9
+		- Updated the tool for Classic Era, Classic Cataclysm, and Retail. Don't forget to copy the contents of CopyTheContentOfThisFolderToInterface and overwrite the existing files!
+		- Retail specific: if any of your favorite character slots is empty (ignore this, if you don't know what favorite slots are), then the tool will move characters up until all fav slots are used.
+		- Issues and bugs are possible. Please report them.
+		- Known issues:
+			- In era/cata processing the character selection screen can take quite a while (one minute or more) for if there is no existing character on the selected server
+			- In retail some servers are locked for players without existing characters on them. The tool can't detect them. They can be selected. But creating a character will fail and the tool will report an incorrect character name.
 
-	
 
 	r1.8
 		- Tried to fix the only first character in the list is recognized issue that some users have. As the root cause of that issue still is unclear, it's just a try. Any feedback if it is working now is highly appreciated.

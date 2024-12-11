@@ -1,7 +1,7 @@
 ﻿;------------------------------------------------------------------------------------------
 AcceptContract()
 {
-	tmp := UiToScreen(9999, 195)
+	tmp := UiToScreen(gGameUiWidgets.AcceptContractTextCenter.x, gGameUiWidgets.AcceptContractTextCenter.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 2000
 	Loop 5
@@ -10,10 +10,10 @@ AcceptContract()
 	}
 
 	sleep, 1000
-	ty := 439
+	ty := gGameUiWidgets.AcceptContractAcceptButton.y
 	Loop, 34
 	{
-		tmp := UiToScreen(9950, ty)
+		tmp := UiToScreen(gGameUiWidgets.AcceptContractAcceptButton.y, ty)
 		MouseMove, tmp.X, tmp.Y, 0
 		WaitForX(1, 100)
 		Send {Click}
@@ -22,7 +22,7 @@ AcceptContract()
 
 	Loop, 34
 	{
-		tmp := UiToScreen(9893, (A_Index * 17) + 502)
+		tmp := UiToScreen(gGameUiWidgets.AcceptContractAcceptButton2.x, (A_Index * 17) + gGameUiWidgets.AcceptContractAcceptButton2.y)
 		MouseMove, tmp.X, tmp.Y, 0
 		WaitForX(1, 100)
 		Send {Click}
@@ -38,7 +38,7 @@ ClosePopUps()
 		;click 1 line 1 button popup away
 		;MsgBox 1L 1B
 		tPopupClosed := true
-		tmpScreen := UiToScreen(9915, 397)
+		tmpScreen := UiToScreen(gGameUiWidgets.Is11PopupButton.x, gGameUiWidgets.Is11PopupButton.y)
 		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Click}
 		Sleep, 200
@@ -49,7 +49,7 @@ ClosePopUps()
 		;click 2 lines 1 button popup away
 		;MsgBox 2L 1B
 		tPopupClosed := true
-		tmpScreen := UiToScreen(9915, 405)
+		tmpScreen := UiToScreen(gGameUiWidgets.Is21PopupButton.x, gGameUiWidgets.Is21PopupButton.y)
 		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Click}
 		Sleep, 200
@@ -60,7 +60,7 @@ ClosePopUps()
 		;click 1 line 2 buttons popup away
 		;MsgBox 1L 2B
 		tPopupClosed := true
-		tmpScreen := UiToScreen(10196, 397)
+		tmpScreen := UiToScreen(gGameUiWidgets.Is12PopupButtonLeft.x, gGameUiWidgets.Is12PopupButtonLeft.y)
 		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Click}
 		Sleep, 200
@@ -71,7 +71,7 @@ ClosePopUps()
 		;click 2 lines 2 buttons popup away (right button)
 		;MsgBox 2L 2B
 		tPopupClosed := true
-		tmpScreen := UiToScreen(10196, 405)
+		tmpScreen := UiToScreen(gGameUiWidgets.Is22PopupButtonRight.x, gGameUiWidgets.Is22PopupButtonRight.y)
 		MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
 		Send {Click}
 		Sleep, 200
@@ -134,7 +134,7 @@ GetLockedRaces()
 ;------------------------------------------------------------------------------------------
 ScrollUpCharacterList()
 {
-	tmp := UiToScreen(-90, 200)
+	tmp := UiToScreen(gGameUiWidgets.ScrollUpCharacterListPosition.x, gGameUiWidgets.ScrollUpCharacterListPosition.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	sleep, 200
 	Loop 50
@@ -156,7 +156,7 @@ UpdateFavoriteSlots()
 
 	WaitForX(1, 1000)
 
-	tmp := UiToScreen(-10, 10)
+	tmp := UiToScreen(gGameUiWidgets.CharSelectionScreenSafeMousePos.x, gGameUiWidgets.CharSelectionScreenSafeMousePos.y)
 	MouseMove, tmp.X, tmp.Y, 0
 	WaitForX(1, 200)
 
@@ -227,4 +227,16 @@ UpdateFavoriteSlots()
 	}
 	;MsgBox, finished 1
 	return
+}
+
+;------------------------------------------------------------------------------------------
+ClickAwayOutdateAddonsWarning()
+{
+	tmpScreen := UiToScreen(gGameUiWidgets.OutdatedAddonsWarning1Button.x, gGameUiWidgets.OutdatedAddonsWarning1Button.y)
+	MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
+	Send {Click}
+	Sleep, 1000
+	tmpScreen := UiToScreen(gGameUiWidgets.OutdatedAddonsWarning2Button.x, gGameUiWidgets.OutdatedAddonsWarning2Button.y)
+	MouseMove, floor(tmpScreen.X), floor(tmpScreen.Y), 0
+	Send {Click}
 }

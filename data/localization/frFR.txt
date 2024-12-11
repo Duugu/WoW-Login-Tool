@@ -105,3 +105,8 @@ Demon_Hunter==Chasseur de démons
 Death_Knight==Chevalier de la mort
 Evoker==Evocateur
 Version==Version
+Anniversary==Jubilé
+hardcore==Extréme
+hardcore_pve==Extréme_pve
+hardcore_pvp==Extréme_pvp
+hardcore_rp==Extréme_rp
