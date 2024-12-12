@@ -73,6 +73,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.10
+		- Added low res textures, hopefully making the tool work with retail and low screen resolutions.
+
 	r1.9
 		- Updated the tool for Classic Era, Classic Cataclysm, and Retail. Don't forget to copy the contents of CopyTheContentOfThisFolderToInterface and overwrite the existing files!
 		- Retail specific: if any of your favorite character slots is empty (ignore this, if you don't know what favorite slots are), then the tool will move characters up until all fav slots are used.
