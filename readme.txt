@@ -33,6 +33,7 @@ In Play mode, you can use NUMPAD 7 to left-click at your feet in the game world,
 Most issues are caused by screen overlays that prevent the WoW Login Tool from recognising the WoW game screen.
 - If you are in a Discord voice channel, Discord will display an overlay of all channel members at the top left of your screen. This overlay blocks the login tool. You should disable this feature in Discord. In Discord, go to User Settings > Game Overlay, and toggle Enable in-game overlay to Off.
 - If you have an Nvidia graphics adapter, there may be an overlay at the top right of your screen showing the status of your graphics adapter. This is caused by an Nvidia tool that could be installed by default with your graphics adapter setup. This overlay blocks the WoW login tool. You can try hiding the overlay using the default Nvidia Alt+R shortcut.
+- If you have increased or decreased the brigthness for Windows and/or the game (or any other setting that could affect colors), try to reset to the default brightness. Changing it changes the colors of textures the tool depends on to recognize the game window.
 If neither of these fixes the problem, please check that you've copied the folders from CopyTheContentOfThisFolderToInterface to the correct game folder.
 If this is confirmed and you are still having problems, please feel free to join our Discord server and ask for help: https://discord.gg/FsfKeqxZV4
 
