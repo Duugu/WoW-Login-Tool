@@ -33,9 +33,9 @@ In Play mode, you can use NUMPAD 7 to left-click at your feet in the game world,
 Most issues are caused by screen overlays that prevent the WoW Login Tool from recognising the WoW game screen.
 - If you are in a Discord voice channel, Discord will display an overlay of all channel members at the top left of your screen. This overlay blocks the login tool. You should disable this feature in Discord. In Discord, go to User Settings > Game Overlay, and toggle Enable in-game overlay to Off.
 - If you have an Nvidia graphics adapter, there may be an overlay at the top right of your screen showing the status of your graphics adapter. This is caused by an Nvidia tool that could be installed by default with your graphics adapter setup. This overlay blocks the WoW login tool. You can try hiding the overlay using the default Nvidia Alt+R shortcut.
-- If you have increased or decreased the brigthness for Windows and/or the game (or any other setting that could affect colors), try to reset to the default brightness. Changing it changes the colors of textures the tool depends on to recognize the game window.
-If neither of these fixes the problem, please check that you've copied the folders from CopyTheContentOfThisFolderToInterface to the correct game folder.
-If this is confirmed and you are still having problems, please feel free to join our Discord server and ask for help: https://discord.gg/FsfKeqxZV4
+- If you have increased or decreased the brigthness for Windows and/or the game, using HDR, or some high contrast setting (or any other setting that could affect colors), try to reset to the default or disable it. The tool depends on specific textures to have specific colors to recognize the game window. HDR/high contrast/etc. is changing them, leading to the tool don't working anymore.
+- If neither of these fixes the problem, please check that you've copied the folders from CopyTheContentOfThisFolderToInterface to the correct game folder.
+If all this isn't helping, please feel free to join our Discord server and ask for help: https://discord.gg/FsfKeqxZV4
 
 # Using the tool
 Important: Do not press any keys while the tool is working (it will play the blip, blip sound). Do not move the mouse or click while the tool is running.
@@ -74,6 +74,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.11
+		- Added a key bind to take a full screen screenshot and add it to the Windows clipboard: control + alt + f2
+
 	r1.10
 		- Added low res textures, hopefully making the tool work with retail and low screen resolutions.
 
@@ -84,7 +87,6 @@ Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login
 		- Known issues:
 			- In era/cata processing the character selection screen can take quite a while (one minute or more) for if there is no existing character on the selected server
 			- In retail some servers are locked for players without existing characters on them. The tool can't detect them. They can be selected. But creating a character will fail and the tool will report an incorrect character name.
-
 
 	r1.8
 		- Tried to fix the only first character in the list is recognized issue that some users have. As the root cause of that issue still is unclear, it's just a try. Any feedback if it is working now is highly appreciated.
