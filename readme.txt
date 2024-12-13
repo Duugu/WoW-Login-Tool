@@ -74,6 +74,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.13
+		- Tried to fix an issue with some screen resolutions and retail.
+
 	r1.12
 		- Added a log (log.txt in scripts root folder) to make troubleshoting easier. The existing log content is deleted on each script start.
 
