@@ -60,6 +60,8 @@ return
 ;------------------------------------------------------------------------------------------
 SwitchToMode_2()
 {
+	AddToLogFile("SwitchToMode_2")
+
 	mode := -2
 	PlayUtterance(L["setup mode"])
 	sleep, 500
@@ -71,6 +73,7 @@ SwitchToMode_2()
 ;------------------------------------------------------------------------------------------
 SwitchToMode_1()
 {
+	AddToLogFile("SwitchToMode_1")
 	mode := -1
 	PlayUtterance(L["pause mode"])
 	sleep, 500
@@ -79,6 +82,7 @@ SwitchToMode_1()
 ;------------------------------------------------------------------------------------------
 SwitchToMode0()
 {
+	AddToLogFile("SwitchToMode0")
 	mode := 0
 	PlayUtterance(L["play mode"])
 	sleep, 500
@@ -87,6 +91,7 @@ SwitchToMode0()
 ;------------------------------------------------------------------------------------------
 SwitchToMode1()
 {
+	AddToLogFile("SwitchToMode1")
 	LoadData()
 	gNumberOfCharsOnCurrentRealm := -1
 	mode = 1

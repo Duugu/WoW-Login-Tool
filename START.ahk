@@ -10,6 +10,9 @@ FileEncoding, UTF-8
 global gSettingsVersion := 1.9
 
 ;------------------------------------------------------------------------------------------
+#Include %A_ScriptDir%\data\includes\debug.ahk
+
+;------------------------------------------------------------------------------------------
 #Include %A_ScriptDir%\data\includes\sapi.ahk
 #Include %A_ScriptDir%\data\includes\localization.ahk
 #Include %A_ScriptDir%\data\includes\helpers.ahk
@@ -50,7 +53,9 @@ global Mode := -1
 global gInQueue := false
 global gOrgSapiVoiceObject
 
+
 ;------------------------------------------------------------------------------------------
+ClearLogFile()
 LoadSettings()
 LoadLocalizationData()
 SwitchToMode_1()
@@ -80,5 +85,3 @@ gosub InitMenuFirstStartRegionMenu
 #Include %A_ScriptDir%\data\includes\keybinds.ahk
 #Include %A_ScriptDir%\data\includes\datahandling.ahk
 
-;------------------------------------------------------------------------------------------
-;#Include %A_ScriptDir%\data\includes\debug.ahk

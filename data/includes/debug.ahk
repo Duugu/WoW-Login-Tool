@@ -1,4 +1,29 @@
-﻿/*
+﻿global StartTime := A_TickCount
+;------------------------------------------------------------------------------------------
+ClearLogFile()
+{
+	StartTime := A_TickCount
+	try{
+		FileDelete, log.txt
+	}
+}
+
+;------------------------------------------------------------------------------------------
+AddToLogFile(aString)
+{
+	try{
+		file := FileOpen("log.txt", "a")
+		if IsObject(file)
+		{
+			ElapsedTime := A_TickCount - StartTime
+			file.Write(ElapsedTime . ":" . aString . "`r`n")
+			file.Close()
+		}
+	}
+}
+
+
+/*
 
 
 SetTimer, CloseMailWarnings, 250

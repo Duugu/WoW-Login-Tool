@@ -73,6 +73,7 @@ IsRealmQueue()
 	}
 
 	OutputDebug % "IsRealmQueue" rReturnValue
+	AddToLogFile("IsRealmQueue " . rReturnValue)
 	return rReturnValue
 
 }
@@ -130,6 +131,8 @@ IsIngame()
 
 
 	OutputDebug % "IsIngame" rReturnValue
+	AddToLogFile("IsIngame " rReturnValue)
+
 	return rReturnValue
 }
 
@@ -144,6 +147,7 @@ IsGlue()
 	}
 
 	OutputDebug % "IsGlue" rReturnValue
+	AddToLogFile("IsGlue " . rReturnValue)
 	return rReturnValue
 }
 
@@ -163,6 +167,7 @@ IsLoginScreenInitialStart()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsLoginScreenInitialStart" rReturnValue
+	AddToLogFile("IsLoginScreenInitialStart " . rReturnValue)
 	return rReturnValue
 }
 
@@ -186,6 +191,7 @@ IsLoginScreen()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsLoginScreen" rReturnValue
+	AddToLogFile("IsLoginScreen " . rReturnValue)
 	return rReturnValue
 }
 
@@ -205,6 +211,7 @@ IsCharSelectionScreen()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsCharSelectionScreen" rReturnValue
+	AddToLogFile("IsCharSelectionScreen " . rReturnValue)
 	return rReturnValue
 }
 
@@ -223,6 +230,7 @@ IsCharCreationScreen()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsCharCreationScreen" rReturnValue
+	AddToLogFile("IsCharCreationScreen " . rReturnValue)
 	return rReturnValue
 }
 
@@ -241,6 +249,7 @@ IsRealmSelectionScreen()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsRealmSelectionScreen" rReturnValue
+	AddToLogFile("IsRealmSelectionScreen " . rReturnValue)
 	return rReturnValue
 }
 
@@ -258,6 +267,7 @@ IsRealmListScrollbar()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsRealmListScrollbar" rReturnValue
+	AddToLogFile("IsRealmListScrollbar " . rReturnValue)
 	return rReturnValue
 }
 
@@ -277,6 +287,7 @@ IsContract()
 	}
 	gIgnoreKeyPress := false
 	OutputDebug % "IsContract" rReturnValue
+	AddToLogFile("IsContract " . rReturnValue)
 	return rReturnValue
 }
 
@@ -297,6 +308,7 @@ IsOutdatedAddonsWarning()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsOutdatedAddonsWarning" rReturnValue
+	AddToLogFile("IsOutdatedAddonsWarning " . rReturnValue)
 	return rReturnValue
 }
 
@@ -315,6 +327,7 @@ IsHighPopServerWarning()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsHighPopServerWarning" rReturnValue
+	AddToLogFile("IsHighPopServerWarning " . rReturnValue)
 	return rReturnValue
 }
 
@@ -332,6 +345,7 @@ IsDisconnected()
 	;MsgBox % rReturnValue
 	gIgnoreKeyPress := false
 	OutputDebug % "IsDisconnected" rReturnValue
+	AddToLogFile("IsDisconnected " . rReturnValue)
 	return rReturnValue
 }
 
@@ -349,6 +363,7 @@ IsDeleteButtonEnabled()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsDeleteButtonEnabled" rReturnValue
+	AddToLogFile("IsDeleteButtonEnabled " . rReturnValue)
 	return rReturnValue
 }
 
@@ -366,6 +381,7 @@ IsDeleteButtonDisabled()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsDeleteButtonDisabled" rReturnValue
+	AddToLogFile("IsDeleteButtonDisabled " . rReturnValue)
 	return rReturnValue
 }
 
@@ -383,6 +399,7 @@ IsDeleteCancelButton()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsDeleteCancelButton" rReturnValue
+	AddToLogFile("IsDeleteCancelButton " . rReturnValue)
 	return rReturnValue
 }
 /*
@@ -431,6 +448,7 @@ Is12Popup()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "Is12Popup" rReturnValue
+	AddToLogFile("Is12Popup " . rReturnValue)
 	return rReturnValue
 }
 
@@ -452,6 +470,7 @@ Is22Popup()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "Is22Popup" rReturnValue
+	AddToLogFile("Is22Popup " . rReturnValue)
 	return rReturnValue
 }
 
@@ -472,6 +491,7 @@ Is11Popup()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "Is11Popup" rReturnValue
+	AddToLogFile("Is11Popup " . rReturnValue)
 	return rReturnValue
 }
 
@@ -492,6 +512,7 @@ Is21Popup()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "Is21Popup" rReturnValue
+	AddToLogFile("Is21Popup " . rReturnValue)
 	return rReturnValue
 }
 
@@ -510,6 +531,7 @@ IsDeleteCharPopup()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsDeleteCharPopup" rReturnValue
+	AddToLogFile("IsDeleteCharPopup " . rReturnValue)
 	return rReturnValue
 }
 
@@ -527,6 +549,7 @@ IsReconnect()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsReconnect" rReturnValue
+	AddToLogFile("IsReconnect " . rReturnValue)
 	return rReturnValue
 }
 
@@ -544,6 +567,7 @@ IsConnectingToGame()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsConnectingToGame" rReturnValue
+	AddToLogFile("IsConnectingToGame " . rReturnValue)
 	return rReturnValue
 }
 
@@ -572,5 +596,6 @@ IsCharCreattionPreviewButtonDisabled()
 
 	gIgnoreKeyPress := false
 	OutputDebug % "IsCharCreattionPreviewButtonDisabled" rReturnValue
+	AddToLogFile("IsCharCreattionPreviewButtonDisabled" . rReturnValue)
 	return rReturnValue
 }
