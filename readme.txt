@@ -74,6 +74,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.15
+		- Second try to fix the Retail Outdated Addons bug.
+
 	r1.14
 		- Fixed a bug with the Outdated Addons warning in Retail that should be auto clicked away by the tool.
 
