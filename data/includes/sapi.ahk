@@ -86,12 +86,14 @@ SetToolVoiceByName(newVoiceName)
 ;------------------------------------------------------------------------------------------
 PlayUtterance(aText)
 {
+
 	if(aText = L["wait"])
 	{
 		SoundPlay, % A_WorkingDir . "\data\soundfiles\sound-notification6_de.mp3"
 	}
 	else
 	{
+		;OutputDebug, % aText
 		aText := StrReplace(aText, "_", " ")
 
 		try

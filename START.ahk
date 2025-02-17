@@ -64,7 +64,7 @@ SwitchToMode_1()
 gosub InitMenu
 if(gHasSetup = false)
    {
-      gHasSetupGametype := "Retail"
+      gHasSetupGametype := "Cata"
       gHasSetupRegion  := "enEN"
       gHasSetupLanguage := "USA"
       LoadData()

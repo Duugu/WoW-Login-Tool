@@ -1,5 +1,9 @@
 WoW Login Tool
 
+PLEASE NOTE:
+The tool isn't working anymore (or at least very unreliable) for Retail. It can't be fixed.
+It's still working for Cataclysm and Classic (Era, SoD, etc.).
+
 IMPORTANT:
 Carefully follow the instructions below to set up the tool, otherwise it won't work.
 If the tool isn't working, please consult the "Common problems when the tool doesn't work" section below.
@@ -74,6 +78,9 @@ Go to https://duugu.github.io/Sku and check the Updates section of this page to 
 Open the Excel spreadsheet data\localization\translations.xlsx in your WoW Login Tool folder and follow the instructions on the Instructions tab.
 
 # Release Notes
+	r1.16
+		- Fixed a bug with character creation on Classic Era.
+
 	r1.15
 		- Second try to fix the Retail Outdated Addons bug.
 
